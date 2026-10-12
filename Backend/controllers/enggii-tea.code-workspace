@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../engi tea frontend/enggii-tea-website/enggii-tea"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "enggii-tea"
+	}
+}

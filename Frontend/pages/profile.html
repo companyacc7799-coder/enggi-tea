@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile | Enggii Tea</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="dashboard-page inner-page profile-page">
+  <aside class="dashboard-sidebar" id="dashboardSidebar">
+    <a href="../index.html" class="dashboard-brand" aria-label="Enggii Tea Home">
+      <span class="brand-icon">🎓</span>
+      <span class="brand-text">ENGGI <b>TEA</b></span>
+    </a>
+
+    <nav class="dashboard-nav" aria-label="Main navigation">
+      <a href="../index.html" class="dashboard-nav-link"><span class="nav-icon">⌂</span><span>Home</span></a>
+      <a href="dashboard.html" class="dashboard-nav-link"><span class="nav-icon">▦</span><span>Semesters</span></a>
+      <a href="formulas.html" class="dashboard-nav-link"><span class="nav-icon">▤</span><span>Formula Sheets</span></a>
+      <a href="search.html?resourceType=Question%20Paper" class="dashboard-nav-link"><span class="nav-icon">▤</span><span>Question Papers</span></a>
+      <a href="about.html" class="dashboard-nav-link"><span class="nav-icon">ⓘ</span><span>About</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-logout-wrap">
+        <button type="button" class="btn btn-primary sidebar-logout" onclick="requestLogout()"><span class="nav-icon">↪</span><span>Logout</span></button>
+      </div>
+      <a href="profile.html" class="sidebar-profile" aria-label="Student profile">
+        <span class="sidebar-profile-avatar" aria-hidden="true">S</span>
+        <span class="sidebar-profile-copy"><strong>Student</strong><small>B.Tech AI &amp; DS</small></span>
+        <span class="sidebar-profile-arrow" aria-hidden="true">›</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="dashboard-main inner-main">
+    <header class="dashboard-topbar inner-topbar">
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu">☰</button>
+      <div class="topbar-spacer"></div>
+      <div id="authArea" class="home-auth"></div>
+    </header>
+
+    <div class="profile-wrap">
+      <div class="profile-headline">
+        <div>
+          <h2>My Student Profile</h2>
+          <p>Your Enggii Tea account, academic identity and learning access.</p>
+        </div>
+        <span class="profile-status">Active account</span>
+      </div>
+
+      <section class="profile-card-main" aria-label="Student profile information">
+        <div class="profile-side">
+          <div class="profile-avatar-large" id="avatar">S</div>
+          <h3 id="profileName">Loading...</h3>
+          <p id="profileEmail">Loading...</p>
+          <span class="profile-role" id="roleValue">Student</span>
+        </div>
+
+        <div class="profile-details">
+          <div class="profile-details-top">
+            <h3>Academic &amp; Account Details</h3>
+            <p>A clean snapshot of the profile connected to Enggii Tea.</p>
+          </div>
+
+          <div class="profile-detail-grid">
+            <div class="profile-detail-item"><span>Full Name</span><strong id="nameValue">—</strong></div>
+            <div class="profile-detail-item"><span>Email Address</span><strong id="emailValue">—</strong></div>
+            <div class="profile-detail-item"><span>Programme</span><strong>B.Tech Artificial Intelligence &amp; Data Science</strong></div>
+            <div class="profile-detail-item"><span>Learning Focus</span><strong>Engineering Mathematics &amp; Exam Preparation</strong></div>
+          </div>
+
+          <div class="profile-academic-strip" aria-label="Academic snapshot">
+            <div class="profile-academic-item"><span>Current Year</span><strong>2nd Year</strong></div>
+            <div class="profile-academic-item"><span>Department</span><strong>AI &amp; Data Science</strong></div>
+            <div class="profile-academic-item"><span>Learning Area</span><strong>Engineering Mathematics</strong></div>
+          </div>
+
+          <div class="profile-actions">
+            <button class="btn btn-danger" id="logoutProfile" type="button">Logout</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="inner-footer">© 2026 Enggii Tea · Engineering Mathematics Resource Hub</footer>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/auth.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", loadProfile);
+    async function loadProfile() {
+      try {
+        let user = null;
+        try { user = await fetchCurrentUser(); } catch (error) { console.warn("Profile API unavailable; using cached student details.", error); }
+        const cached = typeof getStoredUser === "function" ? getStoredUser() : null;
+        user = user || cached || {};
+
+        const email = user.email || "Student account";
+        const name = user.name || (user.email ? user.email.split("@")[0] : "Student");
+        const role = user.role || "student";
+        const displayRole = role.charAt(0).toUpperCase() + role.slice(1);
+
+        document.getElementById("profileName").textContent = name;
+        document.getElementById("profileEmail").textContent = email;
+        document.getElementById("nameValue").textContent = name;
+        document.getElementById("emailValue").textContent = email;
+        document.getElementById("roleValue").textContent = displayRole;
+        document.getElementById("avatar").textContent = name.charAt(0).toUpperCase();
+        document.getElementById("logoutProfile").addEventListener("click", requestLogout);
+      } catch (error) {
+        console.error("Profile loading error:", error);
+        document.getElementById("profileName").textContent = "Student";
+        document.getElementById("profileEmail").textContent = "Student account";
+        document.getElementById("nameValue").textContent = "Student";
+        document.getElementById("emailValue").textContent = "Not available";
+        document.getElementById("roleValue").textContent = "Student";
+        document.getElementById("avatar").textContent = "S";
+        document.getElementById("logoutProfile").addEventListener("click", requestLogout);
+      }
+    }
+  </script>
+</body>
+</html>

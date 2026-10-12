@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ENGGI TEA - Login</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         FULL PAGE BACKGROUND
+         ===================================================== -->
+
+    <div class="page">
+
+        <!-- =================================================
+             LEFT SIDE CONTENT
+             ================================================= -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <!-- Brand -->
+                <div class="brand">
+
+                    <div class="brand-icon">🎓</div>
+
+                    <h1>
+                        ENGGI <span>TEA</span>
+                    </h1>
+
+                </div>
+
+
+                <!-- Main Heading -->
+                <h2>
+                    Learn Today<br>
+                    <span>Build Tomorrow</span>
+                </h2>
+
+
+                <!-- Description -->
+                <p class="welcome-description">
+                    Your Engineering Mathematics<br>
+                    Resource Hub
+                </p>
+
+
+                <!-- Feature List -->
+                <div class="feature-list">
+
+                    <!-- Feature 1 -->
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            ▶
+                        </div>
+
+                        <div class="feature-text">
+                            <strong>Video Lectures</strong>
+                            <span>Learn at your own pace</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 2 -->
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            ▤
+                        </div>
+
+                        <div class="feature-text">
+                            <strong>Formula Sheets</strong>
+                            <span>Quick &amp; easy revision</span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 3 -->
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            ✓
+                        </div>
+
+                        
+                        <div class="feature-text">
+                            <strong> GRAPHS </strong>
+                            <span>Quick &amp; easy revision</span>
+                        </div>
+
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RIGHT SIDE LOGIN CARD
+             ================================================= -->
+
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <!-- Mobile Logo -->
+                <div class="mobile-logo">
+
+                    <div class="mobile-logo-icon">
+                        🎓
+                    </div>
+
+                    <h2>
+                        ENGGI <span>TEA</span>
+                    </h2>
+
+                </div>
+
+
+                <!-- Login Heading -->
+                <div class="login-heading">
+
+                    <h1 id="authHeading">
+                        Welcome
+                    </h1>
+
+                    <p id="authSubheading">
+                        Login to continue your learning journey
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     LOGIN FORM
+                     ================================================= -->
+
+                <form id="loginForm">
+
+                    <!-- Email -->
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="input-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                id="togglePassword"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         FORGOT PASSWORD
+                         Remember Me Removed
+                         ================================================= -->
+
+                    <div class="login-options">
+
+                        <a
+                            href="#"
+                            id="forgotPassword"
+                        >
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+                        <span>Login</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- =================================================
+                     REGISTER FORM
+                     ================================================= -->
+
+                <form
+                    id="registerForm"
+                    style="display:none;"
+                >
+
+                    <!-- Name -->
+                    <div class="input-group">
+
+                        <label for="regName">
+                            Full Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <span class="input-icon">
+                                👤
+                            </span>
+
+                            <input
+                                type="text"
+                                id="regName"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="input-group">
+
+                        <label for="regEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+                            <input
+                                type="email"
+                                id="regEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="input-group">
+
+                        <label for="regPassword">
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="regPassword"
+                                placeholder="Create a password (min 6 characters)"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                id="toggleRegPassword"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Register Button -->
+                    <button
+                        type="submit"
+                        class="login-btn"
+                        id="registerBtn"
+                    >
+                        <span>Create Account</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+                <div
+                    class="divider"
+                    id="loginDivider"
+                >
+                    <span>OR</span>
+                </div>
+
+
+                <!-- =================================================
+                     GOOGLE LOGIN
+                     ================================================= -->
+
+                <button
+                    class="google-btn"
+                    type="button"
+                    id="googleLogin"
+                >
+
+                    <span class="google-icon">
+                        G
+                    </span>
+
+                    <span>
+                        Continue with Google
+                    </span>
+
+                </button>
+
+
+                <!-- Signup -->
+                <div class="signup-text">
+
+                    <span id="signupText">
+                        Don't have an account?
+                    </span>
+
+                    <a
+                        href="#"
+                        id="signupLink"
+                    >
+                        Create Account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="../scripts/api.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

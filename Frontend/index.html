@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Enggii Tea | Engineering Mathematics</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+
+  <style>
+    .sidebar-logout-wrap {
+      margin-top: 12px;
+      padding: 0 18px;
+    }
+
+    .sidebar-logout {
+      width: 100%;
+      min-height: 44px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      border: 0;
+      border-radius: 14px;
+
+      color: #6540e8;
+      background: rgba(255, 255, 255, 0.48);
+
+      border: 1px solid rgba(255, 255, 255, 0.72);
+
+      box-shadow:
+        0 8px 22px rgba(91, 61, 182, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+      cursor: pointer;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .sidebar-logout:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 12px 28px rgba(91, 61, 182, 0.12);
+    }
+
+    .sidebar-logout .nav-icon {
+      width: auto;
+      font-size: 18px;
+      line-height: 1;
+      color: #6540e8;
+    }
+
+    @media (max-width: 760px) {
+      .sidebar-logout-wrap {
+        padding: 0 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="dashboard-page">
+
+  <!-- =====================================================
+       SIDEBAR
+  ====================================================== -->
+
+  <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+    <!-- BRAND -->
+
+    <a
+      href="index.html"
+      class="dashboard-brand"
+      aria-label="Enggii Tea Home">
+
+      <span class="brand-icon">🎓</span>
+
+      <span class="brand-text">
+        ENGGI <b>TEA</b>
+      </span>
+
+    </a>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="dashboard-nav" aria-label="Main navigation">
+
+      <!-- HOME -->
+
+      <a
+        href="index.html"
+        class="dashboard-nav-link active">
+
+        <span class="nav-icon">⌂</span>
+
+        <span>Home</span>
+
+      </a>
+
+
+      <!-- SEMESTERS -->
+
+      <a
+        href="pages/dashboard.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">▦</span>
+
+        <span>Semesters</span>
+
+      </a>
+
+
+      <!-- FORMULA SHEETS -->
+
+      <a
+        href="pages/formulas.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">▤</span>
+
+        <span>Formula Sheets</span>
+
+      </a>
+
+
+      <!-- CALCULATORS -->
+
+      <a
+        href="pages/calculators.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">∑</span>
+
+        <span>Calculators</span>
+
+      </a>
+
+
+      <!-- GRAPHS -->
+
+      <a
+        href="pages/graphs.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">⌁</span>
+
+        <span>Graphs</span>
+
+      </a>
+
+
+      <!-- ABOUT -->
+
+      <a
+        href="pages/about.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">i</span>
+
+        <span>About</span>
+
+      </a>
+
+    </nav>
+
+
+    <!-- KEEP GOING -->
+
+    <div class="keep-going">
+
+      <div class="keep-going-icon">
+        ✦
+      </div>
+
+      <div class="keep-going-text">
+
+        <strong>
+          Keep Going!
+        </strong>
+
+        <span>
+          Small steps make<br>
+          big progress...
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- LOGOUT -->
+
+    <div class="sidebar-logout-wrap">
+
+      <button
+        type="button"
+        class="sidebar-logout"
+        id="sidebarLogout">
+
+        <span class="nav-icon">
+          ↪
+        </span>
+
+        <span>
+          Logout
+        </span>
+
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main class="dashboard-main">
+
+
+    <!-- TOP BAR -->
+
+    <header class="dashboard-topbar">
+
+      <button
+        class="mobile-menu"
+        id="mobileMenu"
+        type="button"
+        aria-label="Open menu">
+
+        ☰
+
+      </button>
+
+      <div class="topbar-spacer"></div>
+
+      <div
+        id="authArea"
+        class="home-auth"
+        aria-hidden="true"
+        style="display:none;">
+      </div>
+
+    </header>
+
+
+    <!-- ===================================================
+         CONTENT
+    ==================================================== -->
+
+    <div class="dashboard-content">
+
+
+      <!-- =================================================
+           HERO
+      ================================================== -->
+
+      <section class="welcome-hero">
+
+
+        <div
+          class="hero-image"
+          aria-hidden="true">
+        </div>
+
+
+        <div class="hero-overlay"></div>
+
+
+        <div
+          class="hero-noise"
+          aria-hidden="true">
+        </div>
+
+
+        
+
+        <!-- KEEP LEARNING FLOAT -->
+
+        <div
+          class="hero-float hero-float-two"
+          aria-hidden="true">
+
+          <span class="float-orb">
+            ✦
+          </span>
+
+          <div>
+            <strong>
+              Keep learning
+            </strong>
+
+            <small>
+              +180 resources
+            </small>
+          </div>
+
+        </div>
+
+
+        
+
+        <!-- HERO CONTENT -->
+
+        <div class="welcome-copy">
+
+
+          <div class="welcome-badge">
+
+            <span>
+              ✦
+            </span>
+
+            <span>
+              ENGINEERING MATHEMATICS
+            </span>
+
+            <i>
+              LIVE
+            </i>
+
+          </div>
+
+
+          <h1>
+            Hello, Learner
+          </h1>
+
+
+          <p>
+            Learn smarter. Build stronger.
+            <br>
+            Your Engineering Mathematics journey starts here.
+          </p>
+
+
+          <a
+            href="pages/dashboard.html"
+            class="continue-learning">
+
+            Explore Resources
+
+            <span>
+              →
+            </span>
+
+          </a>
+
+
+          <div
+            class="hero-metrics"
+            aria-label="Platform highlights">
+
+            <div>
+              <strong>4</strong>
+              <span>Semesters</span>
+            </div>
+
+            <div>
+              <strong>120+</strong>
+              <span>Resources</span>
+            </div>
+
+            <div>
+              <strong>∞</strong>
+              <span>Practice</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           SEMESTERS
+      ================================================== -->
+
+      <section class="semester-section">
+
+
+        <div class="section-heading">
+
+          <div>
+
+            <h2>
+
+              <span class="section-icon">
+                ⌂
+              </span>
+
+              Select Your Semester
+
+            </h2>
+
+
+            <p>
+              Access all resources, videos, formulas and more
+              for your current semester.
+            </p>
+
+          </div>
+
+
+          <a
+            href="pages/dashboard.html"
+            class="view-all">
+
+            View All Semesters
+
+            <span>
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <div class="semester-grid">
+
+
+          <!-- SEMESTER 1 -->
+
+          <a
+            href="pages/subject.html?semester=1"
+            class="semester-card">
+
+            <div class="semester-image">
+
+              <img
+                src="assets/home/applied-calculus.jpg"
+                alt="Applied Calculus">
+
+              <div class="semester-image-overlay"></div>
+
+              <span class="semester-number">
+                01
+              </span>
+
+            </div>
+
+
+            <div class="semester-content">
+
+              <span class="semester-label">
+                Semester 1
+              </span>
+
+              <h3>
+                Applied Calculus
+              </h3>
+
+
+              <div class="topic-tags">
+
+                <span>Limits</span>
+                <span>Derivatives</span>
+                <span>Integrals</span>
+
+              </div>
+
+            </div>
+
+
+            <span class="semester-arrow">
+              →
+            </span>
+
+          </a>
+
+
+          <!-- SEMESTER 2 -->
+
+          <a
+            href="pages/subject.html?semester=2"
+            class="semester-card">
+
+            <div class="semester-image">
+
+              <img
+                src="assets/home/linear-algebra.jpg"
+                alt="Linear Algebra">
+
+              <div class="semester-image-overlay"></div>
+
+              <span class="semester-number">
+                02
+              </span>
+
+            </div>
+
+
+            <div class="semester-content">
+
+              <span class="semester-label">
+                Semester 2
+              </span>
+
+              <h3>
+                Linear Algebra
+              </h3>
+
+
+              <div class="topic-tags">
+
+                <span>Matrices</span>
+                <span>Vectors</span>
+                <span>Eigenvalues</span>
+
+              </div>
+
+            </div>
+
+
+            <span class="semester-arrow">
+              →
+            </span>
+
+          </a>
+
+
+          <!-- SEMESTER 3 -->
+
+          <a
+            href="pages/subject.html?semester=3"
+            class="semester-card">
+
+            <div class="semester-image">
+
+              <img
+                src="assets/home/discrete-mathematics.jpg"
+                alt="Discrete Mathematics">
+
+              <div class="semester-image-overlay"></div>
+
+              <span class="semester-number">
+                03
+              </span>
+
+            </div>
+
+
+            <div class="semester-content">
+
+              <span class="semester-label">
+                Semester 3
+              </span>
+
+              <h3>
+                Discrete Mathematics
+              </h3>
+
+
+              <div class="topic-tags">
+
+                <span>Logic</span>
+                <span>Sets</span>
+                <span>Graphs</span>
+
+              </div>
+
+            </div>
+
+
+            <span class="semester-arrow">
+              →
+            </span>
+
+          </a>
+
+
+          <!-- SEMESTER 4 -->
+
+          <a
+            href="pages/subject.html?semester=4"
+            class="semester-card">
+
+            <div class="semester-image">
+
+              <img
+                src="assets/home/probability-statistics.jpg"
+                alt="Probability and Statistics">
+
+              <div class="semester-image-overlay"></div>
+
+              <span class="semester-number">
+                04
+              </span>
+
+            </div>
+
+
+            <div class="semester-content">
+
+              <span class="semester-label">
+                Semester 4
+              </span>
+
+              <h3>
+                Probability &amp; Statistics
+              </h3>
+
+
+              <div class="topic-tags">
+
+                <span>Probability</span>
+                <span>Distributions</span>
+                <span>Hypothesis</span>
+
+              </div>
+
+            </div>
+
+
+            <span class="semester-arrow">
+              →
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           POPULAR RESOURCES
+      ================================================== -->
+
+      <section class="resources-section">
+
+
+        <div class="section-heading">
+
+          <div>
+
+            <h2>
+
+              <span class="section-icon fire">
+                ♨
+              </span>
+
+              Popular Resources
+
+            </h2>
+
+
+            <p>
+              Quick access to the most useful learning materials
+            </p>
+
+          </div>
+
+
+          <a
+            href="pages/search.html"
+            class="view-all">
+
+            View All Resources
+
+            <span>
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+
+          <!-- VIDEO LECTURES -->
+
+          <a
+            href="pages/search.html?resourceType=Video"
+            class="resource-card">
+
+            <span class="resource-icon purple">
+              ▶
+            </span>
+
+
+            <div>
+
+              <strong>
+                Video Lectures
+              </strong>
+
+              <small>
+                YouTube links &amp; curated playlists
+              </small>
+
+            </div>
+
+
+            <span class="resource-arrow">
+              →
+            </span>
+
+          </a>
+
+
+          <!-- FORMULA SHEETS -->
+
+          <a
+            href="pages/formulas.html"
+            class="resource-card">
+
+            <span class="resource-icon purple">
+              ▤
+            </span>
+
+
+            <div>
+
+              <strong>
+                Formula Sheets
+              </strong>
+
+              <small>
+                Quick &amp; easy revision
+              </small>
+
+            </div>
+
+
+            <span class="resource-arrow">
+              →
+            </span>
+
+          </a>
+
+
+          <!-- QUESTION PAPERS -->
+
+          <a
+            href="pages/search.html?resourceType=Question%20Paper"
+            class="resource-card">
+
+            <span class="resource-icon purple">
+              ▤
+            </span>
+
+
+            <div>
+
+              <strong>
+                Question Papers
+              </strong>
+
+              <small>
+                Previous year papers &amp; practice sets
+              </small>
+
+            </div>
+
+
+            <span class="resource-arrow">
+              →
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+  <!-- EXISTING JS -->
+
+  <script src="scripts/api.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/home.js"></script>
+
+</body>
+
+</html>

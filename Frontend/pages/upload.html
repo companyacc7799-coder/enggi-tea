@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload Resource | Enggii Tea</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="dashboard-page inner-page" data-premium-page="upload.html">
+
+
+<aside class="dashboard-sidebar" id="dashboardSidebar">
+  <a href="../index.html" class="dashboard-brand" aria-label="Enggii Tea Home">
+    <span class="brand-icon">🎓</span>
+    <span class="brand-text">ENGGI <b>TEA</b></span>
+  </a>
+
+  <nav class="dashboard-nav" aria-label="Main navigation">
+    <a href="../index.html" class="dashboard-nav-link "><span class="nav-icon">⌂</span><span>Home</span></a>
+    <a href="dashboard.html" class="dashboard-nav-link "><span class="nav-icon">▦</span><span>Semesters</span></a>
+    <a href="formulas.html" class="dashboard-nav-link "><span class="nav-icon">▤</span><span>Formula Sheets</span></a>
+    <a href="search.html?resourceType=Question%20Paper" class="dashboard-nav-link "><span class="nav-icon">▤</span><span>Question Papers</span></a>
+    <a href="calculators.html" class="dashboard-nav-link "><span class="nav-icon">∑</span><span>Calculators</span></a>
+    <a href="graphs.html" class="dashboard-nav-link "><span class="nav-icon">⌁</span><span>Graphs</span></a>
+    <a href="about.html" class="dashboard-nav-link "><span class="nav-icon">i</span><span>About</span></a>
+  </nav>
+
+  <div class="keep-going">
+    <div class="keep-going-icon">✦</div>
+    <div class="keep-going-text">
+      <strong>Keep Going!</strong>
+      <span>Small steps make<br>big progress...</span>
+    </div>
+  </div>
+</aside>
+
+
+<main class="dashboard-main inner-main">
+
+    <section class="premium-page-hero" data-page-hero>
+      <div class="premium-hero-art" style="--hero-img:url(../assets/home/probability-statistics.jpg)"></div>
+      <div class="premium-hero-glow"></div>
+      <div class="premium-hero-grid"></div>
+      <div class="premium-hero-copy">
+        <span class="premium-eyebrow"><i>✦</i> 09 / Upload</span>
+        <h1>Creator Studio</h1>
+        <p>Publish useful study material with a polished workflow.</p>
+        <div class="premium-hero-line"><span></span><b>ENGGII TEA</b><span></span></div>
+      </div>
+      <div class="premium-hero-orbit orbit-a"></div><div class="premium-hero-orbit orbit-b"></div>
+    </section>
+
+    <header class="dashboard-topbar inner-topbar">
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu">☰</button>
+      <div class="topbar-spacer"></div>
+      <div id="authArea" class="home-auth"></div>
+    </header>
+  <div class="container">
+    <h2 class="page-title">Upload Resource</h2>
+    <p class="page-subtitle">Share useful Engineering Mathematics resources with students.</p>
+
+    <div class="auth-card" style="max-width:700px; margin:0 auto;">
+      <div id="uploadMessage" class="alert" style="display:none;"></div>
+
+      <form id="uploadForm">
+        <div class="form-group">
+          <label for="title">Resource Title</label>
+          <input type="text" id="title" class="form-control" placeholder="Example: Unit 2 Important Problems" required>
+        </div>
+
+        <div class="form-group">
+          <label for="resourceType">Resource Type</label>
+          <select id="resourceType" class="form-control" required>
+            <option value="">Select resource type</option>
+            <option value="Video">Video</option>
+            <option value="Playlist">Playlist</option>
+            <option value="Formula Sheet">Formula Sheet</option>
+            <option value="Question Paper">Question Paper</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="semester">Semester</label>
+          <select id="semester" class="form-control" required>
+            <option value="">Select semester</option>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="unit">Unit</label>
+          <select id="unit" class="form-control">
+            <option value="">Select unit</option>
+            <option value="1">Unit 1</option>
+            <option value="2">Unit 2</option>
+            <option value="3">Unit 3</option>
+            <option value="4">Unit 4</option>
+            <option value="5">Unit 5</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" class="form-control" placeholder="Describe this resource..." rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="youtubeUrl">YouTube URL</label>
+          <input type="url" id="youtubeUrl" class="form-control" placeholder="https://youtube.com/...">
+        </div>
+
+        <div class="form-group">
+          <label for="fileUrl">PDF / File URL</label>
+          <input type="url" id="fileUrl" class="form-control" placeholder="https://...">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitButton">Submit Resource</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="inner-footer">© 2026 Enggii Tea · Engineering Mathematics Resource Hub</footer>
+
+<script src="../scripts/api.js"></script>
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", initializeUpload);
+
+async function initializeUpload() {
+  /* GET /api/auth/me via scripts/api.js — redirects to the
+     login page when there is no valid backend session. */
+  const user = await requireAuth();
+  if (!user) return;
+
+  const form = document.getElementById("uploadForm");
+  const message = document.getElementById("uploadMessage");
+  const button = document.getElementById("submitButton");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const title = document.getElementById("title").value.trim();
+    const resourceType = document.getElementById("resourceType").value;
+    const semester = document.getElementById("semester").value;
+    const unit = document.getElementById("unit").value;
+    const description = document.getElementById("description").value.trim();
+    const youtube_url = document.getElementById("youtubeUrl").value.trim();
+    const file_url = document.getElementById("fileUrl").value.trim();
+
+    if (!title || !resourceType || !semester) {
+      showMessage("Please fill in all required fields.", "error");
+      return;
+    }
+    if (resourceType !== "Formula Sheet" && !unit) {
+      showMessage("Please select a unit for this resource type.", "error");
+      return;
+    }
+    if (youtube_url && !isValidURL(youtube_url)) {
+      showMessage("Please enter a valid YouTube URL.", "error");
+      return;
+    }
+    if (file_url && !isValidURL(file_url)) {
+      showMessage("Please enter a valid file URL.", "error");
+      return;
+    }
+    if (!youtube_url && !file_url) {
+      showMessage("Please provide either a YouTube URL or a PDF/File URL.", "error");
+      return;
+    }
+
+    button.disabled = true;
+    button.textContent = "Submitting...";
+
+    try {
+      /* POST /api/resources — JSON body expected by the backend
+         resourceController. Units are stored as "Unit N". The
+         backend decides the status: admin → approved, else pending. */
+      await apiFetch("/api/resources", {
+        method: "POST",
+        body: {
+          title,
+          description: description || "",
+          semester,
+          unit: unit ? "Unit " + unit : null,
+          resourceType,
+          youtube_url: youtube_url || null,
+          file_url: file_url || null,
+        },
+      });
+
+      showMessage(
+        user.role === "admin"
+          ? "Resource published successfully!"
+          : "Resource submitted successfully! It will be reviewed by an admin.",
+        "success"
+      );
+      form.reset();
+    } catch (err) {
+      console.error("Upload error:", err);
+      showMessage(apiErrorMessage(err), "error");
+    } finally {
+      button.disabled = false;
+      button.textContent = "Submit Resource";
+    }
+  });
+
+  function showMessage(text, type) {
+    message.style.display = "block";
+    message.textContent = text;
+    message.className = type === "success" ? "alert alert-success" : "alert alert-error";
+  }
+
+  function isValidURL(value) {
+    try { new URL(value); return true; } catch { return false; }
+  }
+}
+</script>
+
+</body>
+</html>

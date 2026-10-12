@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semesters | Enggii Tea</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="dashboard-page inner-page" data-premium-page="subject.html">
+
+
+<aside class="dashboard-sidebar" id="dashboardSidebar">
+  <a href="../index.html" class="dashboard-brand" aria-label="Enggii Tea Home">
+    <span class="brand-icon">🎓</span>
+    <span class="brand-text">ENGGI <b>TEA</b></span>
+  </a>
+
+  <nav class="dashboard-nav" aria-label="Main navigation">
+    <a href="../index.html" class="dashboard-nav-link "><span class="nav-icon">⌂</span><span>Home</span></a>
+    <a href="dashboard.html" class="dashboard-nav-link active"><span class="nav-icon">▦</span><span>Semesters</span></a>
+    <a href="formulas.html" class="dashboard-nav-link "><span class="nav-icon">▤</span><span>Formula Sheets</span></a>
+    <a href="search.html?resourceType=Question%20Paper" class="dashboard-nav-link "><span class="nav-icon">▤</span><span>Question Papers</span></a>
+    <a href="calculators.html" class="dashboard-nav-link "><span class="nav-icon">∑</span><span>Calculators</span></a>
+    <a href="graphs.html" class="dashboard-nav-link "><span class="nav-icon">⌁</span><span>Graphs</span></a>
+    <a href="about.html" class="dashboard-nav-link "><span class="nav-icon">i</span><span>About</span></a>
+  </nav>
+
+  <div class="keep-going">
+    <div class="keep-going-icon">✦</div>
+    <div class="keep-going-text">
+      <strong>Keep Going!</strong>
+      <span>Small steps make<br>big progress...</span>
+    </div>
+  </div>
+</aside>
+
+
+<main class="dashboard-main inner-main">
+
+    <section class="premium-page-hero" data-page-hero>
+      <div class="premium-hero-art" style="--hero-img:url(../assets/home/linear-algebra.jpg)"></div>
+      <div class="premium-hero-glow"></div>
+      <div class="premium-hero-grid"></div>
+      <div class="premium-hero-copy">
+        <span class="premium-eyebrow"><i>✦</i> 02 / Subject</span>
+        <h1>Deep-Dive Workspace</h1>
+        <p>Move from a unit outline to the exact resources you need.</p>
+        <div class="premium-hero-line"><span></span><b>ENGGII TEA</b><span></span></div>
+      </div>
+      <div class="premium-hero-orbit orbit-a"></div><div class="premium-hero-orbit orbit-b"></div>
+    </section>
+
+    <header class="dashboard-topbar inner-topbar">
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu">☰</button>
+      <div class="topbar-spacer"></div>
+      <div id="authArea" class="home-auth"></div>
+    </header>
+  <div class="container">
+
+    <div class="breadcrumb">
+      <a href="dashboard.html">Topics</a>
+      <span>›</span>
+      <span id="breadcrumbSemester">Semester</span>
+    </div>
+
+    <section class="card">
+      <h2 id="subjectTitle" class="page-title" style="margin-bottom:5px;">Loading...</h2>
+      <p id="subjectCode" class="page-subtitle" style="margin-bottom:0;">Engineering Mathematics</p>
+    </section>
+
+    <section class="section" id="unitSection">
+      <h2 class="section-title">Units</h2>
+      <p id="unitMessage" class="page-subtitle">Loading units...</p>
+      <div id="unitList" class="unit-list"></div>
+    </section>
+
+    <section class="section" id="resourceSection" style="display:none; margin-top:45px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:18px;">
+        <div>
+          <h2 class="section-title" id="resourceHeading" style="margin-bottom:4px;">Resources</h2>
+          <p class="page-subtitle" style="margin-bottom:0;">Resources for this unit only.</p>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="backToUnitsBtn">← All Units</button>
+      </div>
+
+      <div id="resourceMessage" class="alert" style="display:none;"></div>
+      <div id="resourceList" class="grid grid-3"></div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="inner-footer">© 2026 Enggii Tea · Engineering Mathematics Resource Hub</footer>
+
+<script src="../scripts/api.js"></script>
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", loadSubject);
+
+const subjects = {
+  "1": {
+    name: "Applied Calculus",
+    code: "Engineering Mathematics · Semester 1 · MA25C01",
+    units: [
+      { title: "Differential Calculus", desc: "Limits, Continuity, Differentiation" },
+      { title: "Integral Calculus", desc: "Integration, Definite Integrals" },
+      { title: "Multivariable Calculus", desc: "Partial Differentiation, Multiple Integrals" },
+      { title: "Differential Equations", desc: "First Order, Higher Order" }
+    ]
+  },
+  "2": {
+    name: "Linear Algebra",
+    code: "Engineering Mathematics · Semester 2 · MA25C02",
+    units: [
+      { title: "Vector Spaces", desc: "Subspaces, Span, Basis, Dimension" },
+      { title: "Linear Transformations & Diagonalization", desc: "Eigenvalues, Eigenvectors, Diagonalizability" },
+      { title: "Inner Product Spaces", desc: "Norms, Cauchy-Schwarz, Gram-Schmidt" },
+      { title: "Matrix Decomposition", desc: "QR, SVD, Positive Definite Matrices" }
+    ]
+  },
+  "3": {
+    name: "Discrete Mathematics",
+    code: "Engineering Mathematics · Semester 3 · MA25C13",
+    units: [
+      { title: "Set Theory, Relations, Functions", desc: "Induction, Equivalence, Recurrence Relations" },
+      { title: "Logic", desc: "Propositional, Predicate Logic, Proofs" },
+      { title: "Order & Boolean Algebra", desc: "Posets, Hasse Diagrams, Boolean Algebra" },
+      { title: "Graph Theory", desc: "Euler/Hamiltonian Graphs, Dijkstra's Algorithm" }
+    ]
+  },
+  "4": {
+    name: "Probability & Statistics",
+    code: "Engineering Mathematics · Semester 4 · MA25C14",
+    units: [
+      { title: "Descriptive Statistics", desc: "Central Tendency, Variation, Box Plot" },
+      { title: "Probability & Random Variables", desc: "Bayes' Theorem, Standard Distributions" },
+      { title: "Two-Dimensional Random Variables", desc: "Correlation, Regression, CLT" },
+      { title: "Testing of Hypothesis", desc: "t-test, F-test, Chi-square" },
+      { title: "Design of Experiments", desc: "ANOVA, CRD, RBD, LSD" }
+    ]
+  }
+};
+
+function getSemester() {
+  return new URLSearchParams(window.location.search).get("semester") || "1";
+}
+
+async function loadSubject() {
+  const params = new URLSearchParams(window.location.search);
+  const semester = params.get("semester") || "1";
+  const subject = subjects[semester];
+
+  if (!subject) {
+    document.getElementById("subjectTitle").textContent = "Subject Not Found";
+    document.getElementById("subjectCode").textContent = "Invalid semester";
+    document.getElementById("unitMessage").textContent = "";
+    return;
+  }
+
+  document.getElementById("subjectTitle").textContent = subject.name;
+  document.getElementById("subjectCode").textContent = subject.code;
+  document.getElementById("breadcrumbSemester").textContent = `Semester ${semester}`;
+
+  const unitList = document.getElementById("unitList");
+  unitList.innerHTML = subject.units.map((unit, index) => `
+    <button type="button" class="unit-card" data-unit="${index + 1}">
+      <div>
+        <h3>Unit ${index + 1} — ${escapeHTML(unit.title)}</h3>
+        <p>${escapeHTML(unit.desc)}</p>
+      </div>
+      <span class="chevron">›</span>
+    </button>
+  `).join("");
+
+  unitList.querySelectorAll(".unit-card").forEach(btn => {
+    btn.addEventListener("click", () => openUnitResources(Number(btn.dataset.unit)));
+  });
+
+  document.getElementById("backToUnitsBtn").addEventListener("click", closeUnitResources);
+
+  document.getElementById("unitMessage").style.display = "none";
+
+  /* Deep link support: subject.html?semester=N&unit=X opens that unit's resources */
+  const requestedUnit = parseInt(params.get("unit"), 10);
+  if (requestedUnit >= 1 && requestedUnit <= subject.units.length) {
+    openUnitResources(requestedUnit);
+  }
+}
+
+/* Reveals the resources section for ONE unit only — never the
+   whole subject and never all resources at once. */
+async function openUnitResources(unitNumber) {
+  const semester = getSemester();
+  const subject = subjects[semester];
+  const unit = subject && subject.units[unitNumber - 1];
+  if (!unit) return;
+
+  document.querySelectorAll(".unit-card").forEach(btn => {
+    btn.classList.toggle("active", Number(btn.dataset.unit) === unitNumber);
+  });
+
+  document.getElementById("resourceHeading").textContent = `Unit ${unitNumber} — ${unit.title}`;
+  document.getElementById("resourceSection").style.display = "block";
+  history.replaceState(null, "", `?semester=${encodeURIComponent(semester)}&unit=${unitNumber}`);
+  document.getElementById("resourceSection").scrollIntoView({ behavior: "smooth", block: "start" });
+
+  const resourceList = document.getElementById("resourceList");
+  const resourceMessage = document.getElementById("resourceMessage");
+
+  resourceMessage.style.display = "none";
+  resourceMessage.className = "alert";
+  resourceList.innerHTML = `<div class="loading"><div class="spinner"></div>Loading resources...</div>`;
+
+  try {
+    /* GET /api/resources — public; the backend returns approved
+       resources for the semester/unit plus semester-level formula
+       sheets. Units are stored as "Unit N". */
+    const query =
+      "semester=" + encodeURIComponent(semester) +
+      "&unit=" + encodeURIComponent("Unit " + unitNumber);
+    const body = await apiFetch("/api/resources?" + query);
+    const data = body.data || [];
+
+    if (data.length === 0) {
+      resourceList.innerHTML = "";
+      resourceMessage.style.display = "block";
+      resourceMessage.textContent = "No approved resources for this unit yet. Check back soon.";
+      return;
+    }
+
+    resourceList.innerHTML = data.map(createResourceCard).join("");
+
+  } catch (error) {
+    console.error("Unit resource error:", error);
+    resourceList.innerHTML = "";
+    resourceMessage.style.display = "block";
+    resourceMessage.className = "alert error";
+    resourceMessage.textContent = "Unable to load resources. Please try again.";
+  }
+}
+
+function closeUnitResources() {
+  const semester = getSemester();
+  document.getElementById("resourceSection").style.display = "none";
+  document.querySelectorAll(".unit-card").forEach(btn => btn.classList.remove("active"));
+  history.replaceState(null, "", `?semester=${encodeURIComponent(semester)}`);
+  document.getElementById("unitSection").scrollIntoView({ behavior: "smooth" });
+}
+
+function createResourceCard(resource) {
+  const title = escapeHTML(resource.title || "Untitled Resource");
+  const description = escapeHTML(resource.description || "No description available.");
+  const subject = escapeHTML(resource.subject || "");
+  const unit = escapeHTML(resource.unit || "");
+  const type = escapeHTML(resource.resource_type || "Resource");
+
+  let action = "";
+  if (resource.youtube_url) {
+    action = `<a href="${escapeAttribute(resource.youtube_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Watch →</a>`;
+  } else if (resource.file_url) {
+    action = `<a href="${escapeAttribute(resource.file_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Open →</a>`;
+  } else {
+    action = `<a href="resource.html?id=${encodeURIComponent(resource.id)}" class="btn btn-primary btn-sm">View →</a>`;
+  }
+
+  return `
+    <article class="resource-card">
+      <span class="resource-type">${type}</span>
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <small>${subject}${unit ? " · " + unit : ""}</small>
+      <div style="margin-top:15px; display:flex; justify-content:flex-end;">${action}</div>
+    </article>
+  `;
+}
+
+function escapeHTML(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+function escapeAttribute(value) { return escapeHTML(value); }
+</script>
+
+</body>
+</html>

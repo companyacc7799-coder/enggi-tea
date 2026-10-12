@@ -1,0 +1,1153 @@
+{
+  "title": "YOUTUBE LINKS DATA COLLECTION",
+  "semesters": [
+    {
+      "semester": 1,
+      "course_name": "Applied Calculus",
+      "course_code": "MA25C01",
+      "units": [
+        {
+          "unit_number": 1,
+          "unit_name": "Differential Calculus",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5cKEaqasMThZXXmAkYabho1&si=Hossn5y3Sk0PT9fI"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPy3wsj8wZB5bLfPeecb5qRV&si=Vg-JCoQ2wSJuwGIq"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/7QAUZyddD2Y?si=3PhAzCZhHwna5uNm"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/3IqKxP9WCno?si=fbphNuUAKy1N4qVq"
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Graph of functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/ESwhOcKQEGM?si=GXDEZnRFfeP-bVWy"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/Z2Cse0ze0Wc?si=RfOdIggvwj4uz5Nq"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/Ke0ej5fL1S0?si=yGL97wOctHh0CZET"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/ESwhOcKQEGM?si=M1e8yOtE8sAKp7au"
+                },
+                {
+                  "video_number": "v",
+                  "url": "https://youtu.be/8bUajqYjZrU?si=z11bBkL3G_Pp8jUf"
+                },
+                {
+                  "video_number": "vi",
+                  "url": "https://youtu.be/bnUWhw3lxf4?si=YIP1RzFXmPCuWVuc"
+                },
+                {
+                  "video_number": "vii",
+                  "url": "https://www.youtube.com/watch?v=0fj7ZMyGXok",
+                  "data_quality_notes": "Source contained two concatenated YouTube URLs joined together at item vii; split into two entries (this one and vii-b)."
+                },
+                {
+                  "video_number": "vii-b",
+                  "url": "https://youtu.be/oTCy2VfM76U?si=rrwXvU2vM3fds1Ii",
+                  "data_quality_notes": "Second half of a concatenated URL pair found at original item vii."
+                },
+                {
+                  "video_number": "viii",
+                  "url": "https://youtu.be/DgIpO8ZeOiM?si=HcxsorDOJJ6bjcMW"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "New functions from old functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/HkkOHRgS368?si=LZA8OOytdOfvjgp1"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/_aAX7danBcQ?si=VrInkdYIgJiJqhSu"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/gc32OHjCSkY?si=IIpd78gXdGXF6JbD"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/_O3Ha1-PIlg?si=wwHZ3mV_hx7nQxYg"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Limit of a function",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/Z747u1IlG5c?si=SHiRG0WpKH3RzK4y"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/dgmjCl76pBo?si=sB9vVW0er9RZxuRP"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Continuity",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/RwIXwO16p5E?si=Wb5zfmXAkaOrorvQ"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/Z-0p7kPkPqA?si=6xHBVTTbgzy7xwmz"
+                }
+              ]
+            },
+            {
+              "topic_number": 6,
+              "topic_name": "Limits at infinity",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://www.youtube.com/watch?v=JDaxBU2lAbA"
+                }
+              ]
+            },
+            {
+              "topic_number": 7,
+              "topic_name": "Derivative as a function",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/q8C4c19EVXk?si=Yh9rYYE2fzBTxKyN"
+                }
+              ]
+            },
+            {
+              "topic_number": 8,
+              "topic_name": "Maxima and Minima of functions of single variable",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://www.youtube.com/watch?v=XehAEkua7K0"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://www.youtube.com/watch?v=RRwww98FT1Q"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/i8B85gn6wm4?si=z3YbOJMud0D8UUk3"
+                }
+              ]
+            },
+            {
+              "topic_number": 9,
+              "topic_name": "Mean value theorem",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://www.youtube.com/watch?v=G3JOOfiM-Ng"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://www.youtube.com/watch?v=ypp2ylowE5Q"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/iaCzGMHSmzI?si=Fb3rYDl4MWLDPlK7"
+                }
+              ]
+            },
+            {
+              "topic_number": 10,
+              "topic_name": "Effect of derivatives on the shape of a graph",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/PuEJqmXurNk?si=H9PHYMrgnELQ1Hgo"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unit_number": 2,
+          "unit_name": "Functions of Several Variables",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5dsWAECt-nKsa3pBGgY8EnB&si=Ov6PVebkrkCiLcs_"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPyDqSPRXMZ68g1T-B4c_Ctk&si=07ZeOn73i3bUhsV7"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Partial derivatives",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/HmGta1QMyzg?si=CS0GhCph1z9yEFt6"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/yi2bzjw4-mA?si=NvuF4wjsrrWB6iwm"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/yi2bzjw4-mA?si=vxtsrBAL0cAyBrDs"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/24SYgbxBiD4?si=DwKPdCDc71N0kBVv"
+                },
+                {
+                  "video_number": "v",
+                  "url": "https://youtu.be/VvPyXr9TNaM?si=2IDldmOR7PzmKlBi"
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Chain rule",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/qyPgXkM3jvM?si=tyudyHFBwa0DdZ16"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/C-k3ojwhsYM?si=Gkfq4iN_bdFoBt4F"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/eMZjnPTULhs?si=H2RiupS7AfbQ9jYO"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "Total derivative",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://www.youtube.com/watch?v=4s_5-W-Mjxw%E2%81%A0"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/bNjk0nipPmg?si=7hsAwTzUCmT0M9_9"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/muAbjuKKRes?si=txEXeuRGMWzMmK4p"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Maxima and minima of functions of two variables",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://www.youtube.com/watch?v=6I9AAwyPZ2U%E2%81%A0"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/j5VGo1n8KBY?si=bgiMhpSx7nHdpbvS"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/hby7wFjcMTk?si=AR-FGdyoJp_AEl4e"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/pl5yybPqPRA?si=4p1rCSgynHfbj25E"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Method of Lagrange's Multipliers",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/yF7Bv3Lwjbg?si=UctUi8tdSIapg34J"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/hSmQNtlE4wI?si=e6I6lhXVYbKhVdut"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/G_TeQ1oVpvg?si=rWveoRPVTtJJgOQS"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unit_number": 3,
+          "unit_name": "Integral Calculus",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5cTrQhPGrSPT0Ssc-8aLgq0&si=uyodhO1XkgCqTST-"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPypVvpCyRVQiMILrGpCoLtx&si=cVnzqx6Ul_eQ33pv"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PLEdgWiwledYDqHONRgSdtQJVRKEGU4Mz9&si=LMDbohrZ2vSebmJ1"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Fundamental theorem of Calculus",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://www.youtube.com/live/r6f6LMFyMgs?si=1MMnljfG-tovaBL0"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/xLyuO3zzYsE?si=0svXkkL73xSCq-qe"
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Indefinite integrals and the Net Change Theorem",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/_WWlSylt1d4?si=Zm1CF2jvrG9gwExr"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/hhrHygm105s?si=eU-7QD7dq-9Ng3Dk"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "Improper integrals",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/hxa5RCbGlGc?si=ycoDVCk8s45AArLy"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/Mo2A9ZV1qtE?si=lXFxo1QqDKFqRA5S"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/qYGZFRZlVPc?si=AzH5yg4AIjOAuqWY"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Arc Length",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/7OLJToVovew?si=TpIypHTRn8NBfVDS"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Area of Region",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/79okEjbsTcc?si=oR9TjuQj7f9SuXtv"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/TDKBKpU58EQ?si=-iy4G3LdWrUEPexs"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/AQr2Cegp8ag?si=q2PXZnCEkz97z1SS"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/7XYXU_B6f6U?si=TvmZyrch7sT68Jrp"
+                }
+              ]
+            },
+            {
+              "topic_number": 6,
+              "topic_name": "Area of surface of revolution",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/v55ZwjDQLss?si=lw8kBk6aCgSwBnxV"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unit_number": 4,
+          "unit_name": "Multiple Integrals",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5f07VPu0AOZTDG91u_0pYNS&si=dS416WCqZoZPLUeN"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPxK4EzeBm1NreAWmxDP_tD8&si=7vyvQEhEUep0-h3d"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PLEdgWiwledYB-Uzp59W2w4zleVJ9MQrSS&si=ebYNimNNakl3I17R"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Iterated integrals and Fubini's theorem",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/oI-ysWRcZkw?si=_n1OzXvurmi4_deM"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/rFsk1ZGJyqs?si=pxc61Dj4lGYUibMF"
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Evaluation of double integrals",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/IujThRYA388?si=P4iKW2YXyF1tK5S3"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/6VpvX3hNgrc?si=MQ_EoW5MKFmS3EFH"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/cZt0wcCyEyU?si=5AXUp3w6YDazHKRS"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/mobWk1Cfp0A?si=j5R3L9ce9UbGyhl8"
+                },
+                {
+                  "video_number": "v",
+                  "url": "https://youtu.be/dadIPVslEVs?si=oB7cH7cMv7uZqIJ_"
+                },
+                {
+                  "video_number": "vi",
+                  "url": "https://youtu.be/2DnDmXpdYZ4?si=oZuwl28CF6OeXbo_"
+                },
+                {
+                  "video_number": "vii",
+                  "url": "https://youtu.be/CnYeJbo2XMQ?si=05LP1uSssdfpQGa2"
+                },
+                {
+                  "video_number": "viii",
+                  "url": "https://youtu.be/qGGKkxC5wN0?si=DGrNga4PNTc1ZOKs"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "Change of order of integration",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/DsSycBwj9NM?si=QPROgeJzPX1VEVS2"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/fQu7yVFt1Bk?si=j50ygEGTSTKAJCaW"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/myDNhOJXrfQ?si=CtgMoKgjEdaCgQhN"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/PlP5Jm7gVN8?si=FebDY5WnvvOy7Ux9"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Change of variables between Cartesian and polar co-ordinates",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/MQ_gdKhHt-o?si=2tUQTGX1QpVeMgoR"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/FoqQFCX4mt8?si=AZtBf3Wm0F_lJNQ3"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/DhvatJ2u5M8?si=ITDkW0i4lnSjpV74"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/ntc-f4yQlsk?si=dOrf3yY79MdCI-8W"
+                },
+                {
+                  "video_number": "v",
+                  "url": "https://youtu.be/MvZyy6wGris?si=f-plaEPsSyxAG4-U"
+                },
+                {
+                  "video_number": "vi",
+                  "url": "https://youtu.be/te-MEpa7zEE?si=o96QvGEEFAibKpLt"
+                },
+                {
+                  "video_number": "vii",
+                  "url": "https://youtu.be/IEBrI3YE3yU?si=GsrvSjzlOVEADeXk"
+                },
+                {
+                  "video_number": "viii",
+                  "url": "https://youtu.be/vFmYDK3AR10?si=w9OW7VUxV_v_zyP-"
+                },
+                {
+                  "video_number": "ix",
+                  "url": "https://youtu.be/hAYQRWmAAm4?si=e4HTrCA0ap_dgOl_"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Evaluation of triple integrals - change of variables between Cartesian and cylindrical and spherical co-ordinates",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/XKM8sGSH6KA?si=oMMlHTVYWkTeKirB"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semester": 2,
+      "course_name": "Linear Algebra",
+      "course_code": "MA25C02",
+      "units": [
+        {
+          "unit_number": 1,
+          "unit_name": "Vector Spaces",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5ccYDd5PqL5t3SG2e1LEt96&si=2Vcb225KqGdeDhyE"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLEdgWiwledYCsk6tzuCtNIT6tlTYdC5mV&si=oEgwtIme8CmcX6R8"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PL3KvEThCLojNOz8byRe8aYE-5oOJecdYm&si=f_cPO0OMvfReQa2P"
+            },
+            {
+              "playlist_number": 4,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPy06eioWJwaJFqXtKt5MKw_&si=LdAloNkXkBL0GXIi"
+            },
+            {
+              "playlist_number": 5,
+              "url": "https://youtube.com/playlist?list=PLOmHrZkA584_OKMeXgSXdHbnSOaFhelx4&si=yMLPpBbKs7bT5FZj"
+            }
+          ],
+          "individual_videos": []
+        },
+        {
+          "unit_number": 2,
+          "unit_name": "Linear Transformations and Diagonalization",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5eOv_3NBNO6KskOjoY6s21c&si=8VXWni2FLnwemSn4"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPztQNHAJ-KZwKGbliFmY6-k&si=X1KdCKe-E4x8C9fj"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Null space",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/YpR3XjBu1gk?si=Vqolsl6nBgR-BCxM"
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Range",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/F2AvnyCf7iA?si=rieWRApWrWpwkkSl"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "Dimension Theorem (statement only)",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/-thEVucen_Q?si=6PmwuAK1nN6rjNcH"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Matrix representation of a linear transformation",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/EtMzyxbuovg?si=vzWyrLm7p5SS6QsB"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Eigenvalues & Eigenvectors",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/TyF9yf8V6WY?si=fjR0tUFscdqecLtp"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/N3ffCQDG_WI?si=7SFk4e1xRwbxWl7d"
+                }
+              ]
+            },
+            {
+              "topic_number": 6,
+              "topic_name": "Diagonalizability",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/CbzuMe-q7QU?si=1GUKTNXbQSpRLxtb"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unit_number": 3,
+          "unit_name": "Inner Product Spaces",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5cnCfqHigiZczbs-pNybwX2&si=k_cRoPP33Pj_RXuE"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLEdgWiwledYBaiF5PUyiVl3XguxNktRET&si=qdVSiwJdxMdgLKkl"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PLU891rY8Mz5ZzRiQieq3OlORRjlUBtmrc&si=gQZigsedN9TOISxu"
+            },
+            {
+              "playlist_number": 4,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPzaymSdd51dxxBoyk3aGuRQ&si=Zl58tPSqi_tbEl_0"
+            },
+            {
+              "playlist_number": 5,
+              "url": "https://youtu.be/j3YpNG1oBMo?si=VciCDBwTXTgeTGth",
+              "data_quality_notes": "This entry appears under the 'Playlist' heading in the source but is a single-video youtu.be URL, not a playlist URL. Preserved in its original position without alteration."
+            }
+          ],
+          "individual_videos": []
+        },
+        {
+          "unit_number": 4,
+          "unit_name": "Matrix Decomposition",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLkLKUGSSZo5ewxbX-4x6efMEgFZevDURg&si=djI7MmDsDr7S9iEL"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLfl91dcpsTPyqb0sMOH1REJxp6aKxITnn&si=95XzL_M8hFxDz4Xe"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PLpklqhIbn1jqxYWVeB8VcIyna1psgbnYM&si=8ORBpgVWG_1wjzsP"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Orthogonal transformation of a symmetric matrix to diagonal form",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/PayEFqANpRw?si=pnkUmF_INzhQozRr"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/lIWFlah1IJg?si=j8MU1_7E0Kyf88Hl"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/S3if7yeUowk?si=lkNk8-co0HuE-4aG"
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Positive definite matrices",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/AFjbTNkq0AI?si=Ah4BWkobCcyWF-lU"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/5xglKW5GYM8?si=k36q5zoiI_G3-KQP"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/i-H2M6KkwOI?si=_oh6RHm2cOZnhe-n"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/Dp7ZQWKSseA?si=t0TThj7p6ef16ShE"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "QR decomposition",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/BqtJfygWiRQ?si=QhdWlGEAXrteTh7N"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/wKQ6tLLhK7Y?si=APSL0pNfm66Gpbyr"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/6dAh-4M3JzQ?si=Eva6bgwhN954AoON"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Singular Value Decomposition (SVD)",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/tcrHBNMZKt8?si=LNJtPh-dn6pMCb1H"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/adLcA6nerg8?si=7SiRcbPPt8xm-KvE"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Least squares solutions - simple problems (up to 3 × 3 matrices)",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/NzeWYxgHz2Y?si=uB6GE0Qr5da5xWVD"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/DC_DLiqRfDQ?si=ZuIndgPZaRVvvoBJ"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/XnzqbX2x6Y8?si=wiZ1J0S07OnY47g3"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/O5yyLCe0jL8?si=l0tJl3If_b6MtLnE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semester": 3,
+      "course_name": "Discrete Mathematics",
+      "course_code": null,
+      "data_quality_notes": "No course code was given for this semester in the source document (unlike Semester 1 and 2 headers which included one).",
+      "units": [
+        {
+          "unit_number": 1,
+          "unit_name": "Set Theory, Relations and Functions",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLAtn8qE_V-rg&si=QtvNfnjwMfQ0h2JN"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLNwked28T6g4&si=0kIhW6s-fEG8rz_F"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PL3KvEThCLojMZMsSu44GnjRbPii0XIDlC&si=MZTjuTNiKablnacr"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Inductive definition of sets and proof by induction",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/mvJGl2OTs-E?si=ViGr0LskpwaQa6v2"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/KouXamIqE7E?si=Lw3rRmUDSI6fkoiQ"
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Relations",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/gUqHCxH4yBg?si=5Wm50q1xTwWuWFdx"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/bDaf05Sssgk?si=Y5ykSKNSa8e1W4gd"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "Equivalence relations and partitions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/sz_zRENKF48?si=6N0JTAvL_VNlPcCM"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/NFV6nwJ-D58?si=jnstfKspTqPg0lMa",
+                  "data_quality_notes": "Source contained two concatenated YouTube URLs joined together at item i; split into two entries (this one and i-b)."
+                },
+                {
+                  "video_number": "i-b",
+                  "url": "https://youtu.be/Zd8D2QjC_74?si=Q2JrPj6oI-jXHH6n",
+                  "data_quality_notes": "Second half of a concatenated URL pair found at original item i."
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/Zd8D2QjC_74?si=isHYFnc5fTZMeBgk"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/EqhlxY21Tus?si=x61oeLQpyMcd7KX9"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Type of functions: Injective, surjective and bijective functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/lUriVFXSrx8?si=QPQctcLB8kWXlXgC"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/0lqeW459NTs?si=wyUXyYtljdNpeOGb"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/OF6b6JXtFFA?si=J57b0BI6XryFhuem"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/bZred_Ksz2k?si=tV1TwPes18cNlgVj"
+                }
+              ]
+            },
+            {
+              "topic_number": 6,
+              "topic_name": "Composition of functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/rNvfZFTni6I?si=PMjNqlX63g393DuL"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/TsPAgAj5Gf8?si=DfKxa8HKCqciNzQX"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/gFCDOtorAfE?si=FbXf3pbWM7iCGxdZ"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/uypRgLNhF90?si=g5eEx1ZzFfPC1wPA"
+                }
+              ]
+            },
+            {
+              "topic_number": 7,
+              "topic_name": "Inverse functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/uHvE5Eb1Zac?si=bF2aPRdxmI_Q59mt"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/gfE-GzQjfxQ?si=aRWqF8UuPQtA5fPW"
+                }
+              ]
+            },
+            {
+              "topic_number": 8,
+              "topic_name": "Permutation functions",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/xba6b0hzWgo?si=q-k7rc7e3RWHv4SE"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/QUqv31gSLi0?si=q5WHIpcoT4h2sx0w"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/vulQsnfQsqk?si=DkFTp_PThj6Ak8Ck"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtu.be/WpFG01G2twE?si=1F-w16mqRPymM77G"
+                }
+              ]
+            },
+            {
+              "topic_number": 9,
+              "topic_name": "Recurrence relations",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/EinaQhrI8Wg?si=GMnZygH-ivdlVMcg"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/reIgExVhlLw?si=qhZjT19J5mNXShE4"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/rlW4V8wyZ3w?si=mJOF5oCQo7kl8V4Y"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unit_number": 2,
+          "unit_name": "Logic",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLRw_dUtobQy8&si=XwWujiO9pUJyq88b"
+            }
+          ],
+          "individual_videos": []
+        },
+        {
+          "unit_number": 3,
+          "unit_name": "Boolean Algebra and Lattice Theory",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLHBHQBTTSDlA&si=jHZ13BRLY852qRw_"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PLuwKjRfi2s1UK6SPb9fvgQbxqa7jwWgUs&si=RiFUQKBRYJ_H9RI-"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PLEdgWiwledYCzu7NX_mPtDD4MEf9xiQBx&si=BIjA_6pHWy8RLGaK"
+            }
+          ],
+          "individual_videos": [
+            {
+              "topic_number": 1,
+              "topic_name": "Partial ordering",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/MzSVBjGEqwI?si=lVLDTZS-FfWETb0D"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/R36F8CWAi2k?si=Qa291mzCBMeerx2u"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/STgD7te8iJ0?si=3sIWhyLozK-eeHlH"
+                },
+                {
+                  "video_number": "iv",
+                  "url": "https://youtube.com/playlist?list=PLuwKjRfi2s1UK6SPb9fvgQbxqa7jwWgUs&si=PKHgj2mfWplBBXdW",
+                  "data_quality_notes": "This entry is listed as item iv under the 'Partial ordering' individual-video topic in the source, but it is actually a playlist URL rather than a single video URL. Preserved in its original position without alteration."
+                }
+              ]
+            },
+            {
+              "topic_number": 2,
+              "topic_name": "Posets",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/MzSVBjGEqwI?si=lVLDTZS-FfWETb0D"
+                },
+                {
+                  "video_number": "ii",
+                  "url": "https://youtu.be/R36F8CWAi2k?si=Qa291mzCBMeerx2u"
+                },
+                {
+                  "video_number": "iii",
+                  "url": "https://youtu.be/STgD7te8iJ0?si=3sIWhyLozK-eeHlH"
+                }
+              ]
+            },
+            {
+              "topic_number": 3,
+              "topic_name": "Properties of lattices",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/wsvPWTDZXT0?si=DhvUdlALnb3VFhhx"
+                }
+              ]
+            },
+            {
+              "topic_number": 4,
+              "topic_name": "Lattices as algebraic systems",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/6otfMyGRd58?si=zZzrS8bEihEpwnws"
+                }
+              ]
+            },
+            {
+              "topic_number": 5,
+              "topic_name": "Sub lattices",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/oZ-6p3iyrUA?si=Rx-q_y-Yx9-9lA-F"
+                }
+              ]
+            },
+            {
+              "topic_number": 6,
+              "topic_name": "Direct product and homomorphism",
+              "videos": [
+                {
+                  "video_number": "i",
+                  "url": "https://youtu.be/LO-7_vOyiSI?si=yOG2-VQKBMIAGIX7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unit_number": 4,
+          "unit_name": "Graph Theory",
+          "playlists": [
+            {
+              "playlist_number": 1,
+              "url": "https://youtube.com/playlist?list=PLPscEcAKN3t0&si=UaYfTLg--xfw_N8L"
+            },
+            {
+              "playlist_number": 2,
+              "url": "https://youtube.com/playlist?list=PL3KvEThCLojO5G5xsEJIzgull6YFweCcj&si=h0zfAUzrVOz4EuNG"
+            },
+            {
+              "playlist_number": 3,
+              "url": "https://youtube.com/playlist?list=PLEdgWiwledYBjGFhbfAiOutZW6S5_dP6m&si=_G2lVyEOzyro_aou"
+            },
+            {
+              "playlist_number": 4,
+              "url": "https://youtube.com/playlist?list=PLuwKjRfi2s1U8kaxtlrOwYIC4DPGIbNKV&si=tkWZKyNvYcPvwUSA"
+            }
+          ],
+          "individual_videos": []
+        }
+      ]
+    }
+  ]
+}

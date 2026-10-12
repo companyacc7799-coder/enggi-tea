@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Enggii Tea</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="dashboard-page inner-page" data-premium-page="contact.html">
+
+
+<aside class="dashboard-sidebar" id="dashboardSidebar">
+  <a href="../index.html" class="dashboard-brand" aria-label="Enggii Tea Home">
+    <span class="brand-icon">🎓</span>
+    <span class="brand-text">ENGGI <b>TEA</b></span>
+  </a>
+
+  <nav class="dashboard-nav" aria-label="Main navigation">
+    <a href="../index.html" class="dashboard-nav-link "><span class="nav-icon">⌂</span><span>Home</span></a>
+    <a href="dashboard.html" class="dashboard-nav-link "><span class="nav-icon">▦</span><span>Semesters</span></a>
+    <a href="formulas.html" class="dashboard-nav-link "><span class="nav-icon">▤</span><span>Formula Sheets</span></a>
+   
+    <a href="calculators.html" class="dashboard-nav-link "><span class="nav-icon">∑</span><span>Calculators</span></a>
+    <a href="graphs.html" class="dashboard-nav-link "><span class="nav-icon">⌁</span><span>Graphs</span></a>
+    <a href="about.html" class="dashboard-nav-link active"><span class="nav-icon">i</span><span>About</span></a>
+  </nav>
+
+  <div class="keep-going">
+    <div class="keep-going-icon">✦</div>
+    <div class="keep-going-text">
+      <strong>Keep Going!</strong>
+      <span>Small steps make<br>big progress...</span>
+    </div>
+  </div>
+</aside>
+
+
+<main class="dashboard-main inner-main">
+
+    <section class="premium-page-hero" data-page-hero>
+      <div class="premium-hero-art" style="--hero-img:url(../assets/home/applied-calculus.jpg)"></div>
+      <div class="premium-hero-glow"></div>
+      <div class="premium-hero-grid"></div>
+      <div class="premium-hero-copy">
+        <span class="premium-eyebrow"><i>✦</i> 12 / Contact</span>
+        <h1>Let’s Build Better Study Tools</h1>
+        <p>Questions, feedback or ideas — send them our way.</p>
+        <div class="premium-hero-line"><span></span><b>ENGGII TEA</b><span></span></div>
+      </div>
+      <div class="premium-hero-orbit orbit-a"></div><div class="premium-hero-orbit orbit-b"></div>
+    </section>
+
+    <header class="dashboard-topbar inner-topbar">
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu">☰</button>
+      <div class="topbar-spacer"></div>
+      <div id="authArea" class="home-auth"></div>
+    </header>
+  <div class="container" style="max-width:600px;">
+    <h2 class="page-title">Contact Us</h2>
+    <p class="page-subtitle">Questions, corrections or a resource to suggest — send it our way.</p>
+
+    <div class="form-card">
+      <div id="contactMessage" class="message" style="display:none;"></div>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="contactMsg">Message</label>
+          <textarea id="contactMsg" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="inner-footer">© 2026 Enggii Tea · Engineering Mathematics Resource Hub</footer>
+
+<script src="../scripts/api.js"></script>
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/main.js"></script>
+
+<script>
+/* This form is currently a front-end stub. To make it functional,
+   wire it to your own backend endpoint. */
+document.getElementById("contactForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const box = document.getElementById("contactMessage");
+  box.style.display = "block";
+  box.className = "message success";
+  box.textContent = "Thanks — your message has been noted. We'll get back to you soon.";
+  e.target.reset();
+});
+</script>
+
+</body>
+</html>

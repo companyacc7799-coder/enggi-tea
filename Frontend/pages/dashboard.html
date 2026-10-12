@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Semesters | Enggii Tea</title>
+
+  <link rel="stylesheet" href="../styles/style.css">
+
+  <style>
+    .sidebar-logout-wrap {
+      margin-top: 12px;
+      padding: 0 18px;
+    }
+
+    .sidebar-logout {
+      width: 100%;
+      min-height: 44px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      border: 0;
+      border-radius: 14px;
+
+      color: #6540e8;
+      background: rgba(255, 255, 255, 0.48);
+
+      border: 1px solid rgba(255, 255, 255, 0.72);
+
+      box-shadow:
+        0 8px 22px rgba(91, 61, 182, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+      cursor: pointer;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .sidebar-logout:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.72);
+
+      box-shadow:
+        0 12px 28px rgba(91, 61, 182, 0.12);
+    }
+
+    .sidebar-logout .nav-icon {
+      width: auto;
+      font-size: 18px;
+      line-height: 1;
+      color: #6540e8;
+    }
+
+    @media (max-width: 760px) {
+      .sidebar-logout-wrap {
+        padding: 0 14px;
+      }
+    }
+  </style>
+</head>
+
+
+<body
+  class="dashboard-page inner-page"
+  data-premium-page="dashboard.html">
+
+
+  <!-- =====================================================
+       SIDEBAR
+  ====================================================== -->
+
+  <aside
+    class="dashboard-sidebar"
+    id="dashboardSidebar">
+
+    <!-- BRAND -->
+
+    <a
+      href="../index.html"
+      class="dashboard-brand"
+      aria-label="Enggii Tea Home">
+
+      <span class="brand-icon">🎓</span>
+
+      <span class="brand-text">
+        ENGGI <b>TEA</b>
+      </span>
+
+    </a>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="dashboard-nav"
+      aria-label="Main navigation">
+
+      <a
+        href="../index.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">⌂</span>
+        <span>Home</span>
+
+      </a>
+
+
+      <a
+        href="dashboard.html"
+        class="dashboard-nav-link active">
+
+        <span class="nav-icon">▦</span>
+        <span>Semesters</span>
+
+      </a>
+
+
+      <a
+        href="formulas.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">▤</span>
+        <span>Formula Sheets</span>
+
+      </a>
+
+
+      <a
+        href="calculators.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">∑</span>
+        <span>Calculators</span>
+
+      </a>
+
+
+      <a
+        href="graphs.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">⌁</span>
+        <span>Graphs</span>
+
+      </a>
+
+
+      <a
+        href="about.html"
+        class="dashboard-nav-link">
+
+        <span class="nav-icon">i</span>
+        <span>About</span>
+
+      </a>
+
+    </nav>
+
+
+    <!-- KEEP GOING -->
+
+    <div class="keep-going">
+
+      <div class="keep-going-icon">
+        ✦
+      </div>
+
+      <div class="keep-going-text">
+
+        <strong>Keep Going!</strong>
+
+        <span>
+          Small steps make<br>
+          big progress...
+        </span>
+
+      </div>
+
+    </div>
+    
+
+
+    <!-- LOGOUT -->
+
+    <div class="sidebar-logout-wrap">
+
+      <button
+        type="button"
+        class="sidebar-logout"
+        id="sidebarLogout">
+
+        <span class="nav-icon">↪</span>
+
+        <span>Logout</span>
+
+      </button>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main class="dashboard-main inner-main">
+
+
+    <!-- HERO -->
+
+    <section
+      class="premium-page-hero"
+      data-page-hero>
+
+      <div
+        class="premium-hero-art"
+        style="--hero-img:url(../assets/home/applied-calculus.jpg)">
+      </div>
+
+      <div class="premium-hero-glow"></div>
+
+      <div class="premium-hero-grid"></div>
+
+
+      <div class="premium-hero-copy">
+
+        <span class="premium-eyebrow">
+
+          <i>✦</i>
+
+          01 / Semesters
+
+        </span>
+
+
+        <h1>
+          Academic Command Center
+        </h1>
+
+
+        <p>
+          Explore every semester, unit and learning path.
+        </p>
+
+
+        <div class="premium-hero-line">
+
+          <span></span>
+
+          <b>ENGGII TEA</b>
+
+          <span></span>
+
+        </div>
+
+      </div>
+
+
+      <div class="premium-hero-orbit orbit-a"></div>
+
+      <div class="premium-hero-orbit orbit-b"></div>
+
+    </section>
+
+
+
+    <!-- TOPBAR -->
+
+    <header class="dashboard-topbar inner-topbar">
+
+      <button
+        class="mobile-menu"
+        id="mobileMenu"
+        type="button"
+        aria-label="Open menu">
+
+        ☰
+
+      </button>
+
+      <div class="topbar-spacer"></div>
+
+      <div
+        id="authArea"
+        class="home-auth">
+      </div>
+
+    </header>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="container">
+
+      <h2 class="page-title">
+        Explore by Semester
+      </h2>
+
+      <p class="page-subtitle">
+        Pick a semester to see its subject, units and approved resources.
+      </p>
+
+
+      <!-- SEMESTER GRID -->
+
+      <div class="grid grid-4">
+
+
+        <a
+          href="subject.html?semester=1"
+          class="semester-card">
+
+          <h3>
+            Semester 1
+          </h3>
+
+          <p>
+            Applied Calculus
+          </p>
+
+          <span class="btn btn-primary btn-sm">
+            Explore →
+          </span>
+
+        </a>
+
+
+        <a
+          href="subject.html?semester=2"
+          class="semester-card">
+
+          <h3>
+            Semester 2
+          </h3>
+
+          <p>
+            Linear Algebra
+          </p>
+
+          <span class="btn btn-primary btn-sm">
+            Explore →
+          </span>
+
+        </a>
+
+
+        <a
+          href="subject.html?semester=3"
+          class="semester-card">
+
+          <h3>
+            Semester 3
+          </h3>
+
+          <p>
+            Discrete Mathematics
+          </p>
+
+          <span class="btn btn-primary btn-sm">
+            Explore →
+          </span>
+
+        </a>
+
+
+        <a
+          href="subject.html?semester=4"
+          class="semester-card">
+
+          <h3>
+            Semester 4
+          </h3>
+
+          <p>
+            Probability &amp; Statistics
+          </p>
+
+          <span class="btn btn-primary btn-sm">
+            Explore →
+          </span>
+
+        </a>
+
+      </div>
+
+
+
+      <!-- EXTRA SECTION -->
+
+      <div class="section">
+
+        <div
+          class="card"
+          style="text-align:center;">
+
+          <h2 class="section-title">
+            Not sure where to start?
+          </h2>
+
+          <p>
+            Browse the formula library or search all approved resources
+            to see where you stand.
+          </p>
+
+
+          <div
+            style="
+              display:flex;
+              gap:12px;
+              justify-content:center;
+              flex-wrap:wrap;
+            ">
+
+            <a
+              href="formulas.html"
+              class="btn btn-outline">
+
+              Formula Library
+
+            </a>
+
+
+            <a
+              href="search.html"
+              class="btn btn-primary">
+
+              Browse Resources
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <footer class="inner-footer">
+    © 2026 Enggii Tea · Engineering Mathematics Resource Hub
+  </footer>
+
+
+
+  <!-- EXISTING JS -->
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/auth.js"></script>
+  <script src="../scripts/main.js"></script>
+
+</body>
+</html>

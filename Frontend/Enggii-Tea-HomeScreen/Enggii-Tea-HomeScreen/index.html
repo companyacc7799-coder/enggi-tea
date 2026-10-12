@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enggii Tea | Engineering Mathematics</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="dashboard-page">
+
+  <aside class="dashboard-sidebar" id="dashboardSidebar">
+    <a href="index.html" class="dashboard-brand" aria-label="Enggii Tea Home">
+      <span class="brand-cap">◆</span>
+      <span>ENGGI <b>TEA</b></span>
+    </a>
+
+    <nav class="dashboard-nav" aria-label="Main navigation">
+      <a href="index.html" class="dashboard-nav-link active">
+        <span class="nav-icon">⌂</span><span>Home</span>
+      </a>
+      <a href="pages/dashboard.html" class="dashboard-nav-link">
+        <span class="nav-icon">▦</span><span>Semesters</span>
+      </a>
+      <a href="pages/search.html?resourceType=Video" class="dashboard-nav-link">
+        <span class="nav-icon">▶</span><span>Videos</span>
+      </a>
+      <a href="pages/formulas.html" class="dashboard-nav-link">
+        <span class="nav-icon">▤</span><span>Formula Sheets</span>
+      </a>
+     
+      <a href="pages/search.html" class="dashboard-nav-link">
+        <span class="nav-icon">□</span><span>Resources</span>
+      </a>
+    </nav>
+
+    <div class="keep-going">
+      <div>
+        <strong>Keep Going!</strong>
+        <span>Small steps make<br>big progress...</span>
+      </div>
+      <span class="plant-icon">♧</span>
+    </div>
+
+    <a href="pages/profile.html" class="dashboard-profile" aria-label="Open profile">
+      <span class="avatar">S</span>
+      <span class="profile-text"><strong>Student</strong><small>Student</small></span>
+      <span class="profile-arrow">›</span>
+    </a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-topbar">
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu">☰</button>
+      <form class="dashboard-search" id="homeSearchForm">
+        <span>⌕</span>
+        <input id="homeSearch" type="search" placeholder="Search for topics, videos, formulas..." autocomplete="off">
+      </form>
+      <a href="pages/profile.html" class="top-avatar" aria-label="Open profile">S</a>
+    </header>
+
+    <div class="dashboard-content">
+      <section class="welcome-hero">
+        <div class="hero-scene" aria-hidden="true"></div>
+        <div class="welcome-copy">
+          <h1>Hello, Student! <span>👋</span></h1>
+          <p>Your Engineering Mathematics<br>journey starts here.</p>
+          <a href="pages/dashboard.html" class="continue-learning">Continue Learning <span>→</span></a>
+        </div>
+
+        <div class="quick-actions">
+          <a href="pages/dashboard.html" class="quick-action">
+            <span class="quick-icon">♧</span>
+            <span><strong>Learn</strong><small>concepts</small></span>
+          </a>
+          <a href="pages/search.html?resourceType=Video" class="quick-action">
+            <span class="quick-icon">▶</span>
+            <span><strong>Watch</strong><small>videos</small></span>
+          </a>
+          <a href="pages/calculators.html" class="quick-action">
+            <span class="quick-icon">▤</span>
+            <span><strong>Practice</strong><small>with questions</small></span>
+          </a>
+          <a href="pages/formulas.html" class="quick-action">
+            <span class="quick-icon">↓</span>
+            <span><strong>Download</strong><small>resources</small></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <div class="section-heading">
+          <h2>Video Resources</h2>
+        </div>
+        <div class="video-grid" id="videoGrid"></div>
+      </section>
+
+      <section class="semester-section">
+        <div class="section-heading">
+          <h2>Explore by Semester</h2>
+        </div>
+        <div class="semester-grid">
+          <a href="pages/subject.html?semester=1" class="semester-tile semester-one">
+            <span class="semester-icon">▣</span><span>Semester 1</span><b>→</b>
+          </a>
+          <a href="pages/subject.html?semester=2" class="semester-tile semester-two">
+            <span class="semester-icon">▣</span><span>Semester 2</span><b>→</b>
+          </a>
+          <a href="pages/subject.html?semester=3" class="semester-tile semester-three">
+            <span class="semester-icon">▣</span><span>Semester 3</span><b>→</b>
+          </a>
+          <a href="pages/subject.html?semester=4" class="semester-tile semester-four">
+            <span class="semester-icon">▣</span><span>Semester 4</span><b>→</b>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="scripts/api.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/home.js"></script>
+</body>
+</html>

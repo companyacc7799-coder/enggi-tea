@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Resources | Enggii Tea</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="dashboard-page inner-page" data-premium-page="search.html">
+
+
+<aside class="dashboard-sidebar" id="dashboardSidebar">
+  <a href="../index.html" class="dashboard-brand" aria-label="Enggii Tea Home">
+    <span class="brand-icon">🎓</span>
+    <span class="brand-text">ENGGI <b>TEA</b></span>
+  </a>
+
+  <nav class="dashboard-nav" aria-label="Main navigation">
+    <a href="../index.html" class="dashboard-nav-link "><span class="nav-icon">⌂</span><span>Home</span></a>
+    <a href="dashboard.html" class="dashboard-nav-link "><span class="nav-icon">▦</span><span>Semesters</span></a>
+    <a href="formulas.html" class="dashboard-nav-link "><span class="nav-icon">▤</span><span>Formula Sheets</span></a>
+    <a href="search.html?resourceType=Question%20Paper" class="dashboard-nav-link "><span class="nav-icon">▤</span><span>Question Papers</span></a>
+    <a href="calculators.html" class="dashboard-nav-link "><span class="nav-icon">∑</span><span>Calculators</span></a>
+    <a href="graphs.html" class="dashboard-nav-link "><span class="nav-icon">⌁</span><span>Graphs</span></a>
+    <a href="about.html" class="dashboard-nav-link "><span class="nav-icon">i</span><span>About</span></a>
+  </nav>
+
+  <div class="keep-going">
+    <div class="keep-going-icon">✦</div>
+    <div class="keep-going-text">
+      <strong>Keep Going!</strong>
+      <span>Small steps make<br>big progress...</span>
+    </div>
+  </div>
+</aside>
+
+
+<main class="dashboard-main inner-main">
+
+    <section class="premium-page-hero" data-page-hero>
+      <div class="premium-hero-art" style="--hero-img:url(../assets/home/discrete-mathematics.jpg)"></div>
+      <div class="premium-hero-glow"></div>
+      <div class="premium-hero-grid"></div>
+      <div class="premium-hero-copy">
+        <span class="premium-eyebrow"><i>✦</i> 03 / Search</span>
+        <h1>Resource Discovery</h1>
+        <p>Search a curated library without losing your flow.</p>
+        <div class="premium-hero-line"><span></span><b>ENGGII TEA</b><span></span></div>
+      </div>
+      <div class="premium-hero-orbit orbit-a"></div><div class="premium-hero-orbit orbit-b"></div>
+    </section>
+
+    <header class="dashboard-topbar inner-topbar">
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu">☰</button>
+      <div class="topbar-spacer"></div>
+      <div id="authArea" class="home-auth"></div>
+    </header>
+  <div class="container">
+    <h2 class="page-title">Search Resources</h2>
+    <p class="page-subtitle">Find videos, playlists, formula sheets and question papers across every semester.</p>
+
+    <div class="card">
+      <div class="grid grid-4" style="align-items:end;">
+        <div class="form-group" style="margin-bottom:0;">
+          <label for="searchQuery">Keyword</label>
+          <input type="text" id="searchQuery" class="form-control" placeholder="e.g. Laplace transform">
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label for="filterSemester">Semester</label>
+          <select id="filterSemester" class="form-control">
+            <option value="">All semesters</option>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label for="filterType">Type</label>
+          <select id="filterType" class="form-control">
+            <option value="">All types</option>
+            <option value="Video">Video</option>
+            <option value="Playlist">Playlist</option>
+            <option value="Formula Sheet">Formula Sheet</option>
+            <option value="Question Paper">Question Paper</option>
+          </select>
+        </div>
+        <button type="button" id="searchBtn" class="btn btn-primary btn-block">Search</button>
+      </div>
+    </div>
+
+    <section class="section">
+      <div id="resultMessage" class="alert" style="display:none;"></div>
+      <div id="resultList" class="grid grid-3"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="inner-footer">© 2026 Enggii Tea · Engineering Mathematics Resource Hub</footer>
+
+<script src="../scripts/api.js"></script>
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("semester")) document.getElementById("filterSemester").value = params.get("semester");
+
+  document.getElementById("searchBtn").addEventListener("click", () => runSearch(true));
+  document.getElementById("searchQuery").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") runSearch(true);
+  });
+
+  /* Never list all resources automatically — show a hint instead. */
+  showSearchHint("Pick a keyword, semester or type, then press Search. To browse resources unit by unit, use Topics → Semester → Unit.");
+});
+
+function showSearchHint(text) {
+  const resultList = document.getElementById("resultList");
+  const resultMessage = document.getElementById("resultMessage");
+  resultList.innerHTML = "";
+  resultMessage.className = "alert";
+  resultMessage.style.display = "block";
+  resultMessage.textContent = text;
+}
+
+async function runSearch(explicit) {
+  const resultList = document.getElementById("resultList");
+  const resultMessage = document.getElementById("resultMessage");
+
+  const keyword = document.getElementById("searchQuery").value.trim();
+  const semester = document.getElementById("filterSemester").value;
+  const type = document.getElementById("filterType").value;
+
+  if (explicit && !keyword && !semester && !type) {
+    showSearchHint("Choose a keyword, semester or type before searching — this page never lists all resources at once.");
+    return;
+  }
+
+  resultMessage.style.display = "none";
+  resultMessage.className = "alert";
+  resultList.innerHTML = `<div class="loading"><div class="spinner"></div>Searching...</div>`;
+
+  try {
+    const params = new URLSearchParams();
+    if (keyword) params.set("q", keyword);
+    if (semester) params.set("semester", semester);
+    if (type) params.set("resourceType", type);
+
+    /* With a keyword → GET /api/resources/search?q=…
+       otherwise → GET /api/resources?semester=…&resourceType=…
+       Both are public and only ever return approved resources. */
+    const endpoint = keyword
+      ? "/api/resources/search?" + params.toString()
+      : "/api/resources?" + params.toString();
+    const body = await apiFetch(endpoint);
+    const data = body.data || [];
+
+    resultList.innerHTML = "";
+
+    if (data.length === 0) {
+      resultMessage.style.display = "block";
+      resultMessage.textContent = "No resources matched your search. Try a different keyword or filter.";
+      return;
+    }
+
+    resultList.innerHTML = data.map(createResourceCard).join("");
+
+  } catch (error) {
+    console.error("Search error:", error);
+    resultList.innerHTML = "";
+    resultMessage.style.display = "block";
+    resultMessage.className = "alert error";
+    resultMessage.textContent = "Unable to search resources right now. Please try again.";
+  }
+}
+
+function createResourceCard(resource) {
+  const title = escapeHTML(resource.title || "Untitled Resource");
+  const description = escapeHTML(resource.description || "No description available.");
+  const subject = escapeHTML(resource.subject || "");
+  const unit = escapeHTML(resource.unit || "");
+  const type = escapeHTML(resource.resource_type || "Resource");
+
+  let action = "";
+  if (resource.youtube_url) {
+    action = `<a href="${escapeAttribute(resource.youtube_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Watch →</a>`;
+  } else if (resource.file_url) {
+    action = `<a href="${escapeAttribute(resource.file_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Open →</a>`;
+  } else {
+    action = `<a href="resource.html?id=${encodeURIComponent(resource.id)}" class="btn btn-primary btn-sm">View →</a>`;
+  }
+
+  return `
+    <article class="resource-card">
+      <span class="resource-type">${type}</span>
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <small>${subject}${unit ? " · Unit " + unit : ""}</small>
+      <div style="margin-top:15px; display:flex; justify-content:flex-end;">${action}</div>
+    </article>
+  `;
+}
+
+function escapeHTML(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+function escapeAttribute(value) { return escapeHTML(value); }
+</script>
+
+</body>
+</html>
