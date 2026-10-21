@@ -48,10 +48,13 @@
    API CONFIGURATION
    ===================================================== */
 
+/* Deployed backend (Render). Used when the site is not running locally. */
+const PRODUCTION_API_BASE_URL = "https://enggi-tea.onrender.com";
+
 function resolveApiBaseUrl() {
   if (window.API_BASE_URL) return window.API_BASE_URL;
 
-  const { protocol, hostname, port, origin } = window.location;
+  const { protocol, hostname, port } = window.location;
 
   const isLocalHost =
     hostname === "localhost" ||
@@ -59,13 +62,13 @@ function resolveApiBaseUrl() {
     hostname === "[::1]";
 
   // Local dev (Live Server, file://, etc.) can't serve /api,
-  // so talk to the backend directly.
+  // so talk to the local backend directly.
   if (protocol === "file:" || (isLocalHost && port !== "5000")) {
     return "http://localhost:5000";
   }
 
-  // Served by the backend (or deployed): same origin.
-  return origin;
+  // Deployed: talk to the deployed backend.
+  return PRODUCTION_API_BASE_URL;
 }
 
 const API_BASE_URL = resolveApiBaseUrl();
