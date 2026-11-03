@@ -73,6 +73,79 @@ function resolveApiBaseUrl() {
 
 const API_BASE_URL = resolveApiBaseUrl();
 
+/* Wake the deployed backend as early as possible so the first resource
+   request does not pay the Render cold-start penalty. Fire-and-forget. */
+if (API_BASE_URL === PRODUCTION_API_BASE_URL) {
+  try {
+    fetch(API_BASE_URL + "/api/health", { cache: "no-store" }).catch(function () {});
+  } catch (err) {
+    /* ignore */
+  }
+}
+
+/* ---------- Short-lived cache for public GET requests ----------
+   Uses sessionStorage so moving between resource pages stays instant. */
+
+const API_CACHE_TTL = 60 * 1000;
+const API_CACHE_PREFIX = "enggii_api_cache:";
+
+function isCacheableGet(path) {
+  // Never cache per-user data.
+  if (path.indexOf("/api/resources/user") === 0) return false;
+  return (
+    path === "/api/resources" ||
+    path.indexOf("/api/resources?") === 0 ||
+    path.indexOf("/api/resources/search") === 0 ||
+    path.indexOf("/api/resources/") === 0
+  );
+}
+
+function readCache(path) {
+  try {
+    const raw = sessionStorage.getItem(API_CACHE_PREFIX + path);
+    if (!raw) return { found: false };
+
+    const entry = JSON.parse(raw);
+
+    if (!entry || Date.now() - entry.at > API_CACHE_TTL) {
+      sessionStorage.removeItem(API_CACHE_PREFIX + path);
+      return { found: false };
+    }
+
+    return { found: true, body: entry.body };
+  } catch (err) {
+    return { found: false };
+  }
+}
+
+function writeCache(path, body) {
+  try {
+    sessionStorage.setItem(
+      API_CACHE_PREFIX + path,
+      JSON.stringify({ at: Date.now(), body: body })
+    );
+  } catch (err) {
+    /* storage full or unavailable — ignore */
+  }
+}
+
+function clearApiCache() {
+  try {
+    const keys = [];
+
+    for (let i = 0; i < sessionStorage.length; i += 1) {
+      const key = sessionStorage.key(i);
+      if (key && key.indexOf(API_CACHE_PREFIX) === 0) keys.push(key);
+    }
+
+    keys.forEach(function (key) {
+      sessionStorage.removeItem(key);
+    });
+  } catch (err) {
+    /* ignore */
+  }
+}
+
 const TOKEN_KEY = "enggii_auth_token";
 const USER_KEY = "enggii_auth_user";
 const REFRESH_KEY = "enggii_auth_refresh";
@@ -213,6 +286,14 @@ function refreshAccessToken() {
 /* ---------- Shared fetch wrapper ---------- */
 
 async function apiFetch(path, options = {}) {
+  const method = String(options.method || "GET").toUpperCase();
+  const cacheable = method === "GET" && isCacheableGet(path);
+
+  if (cacheable) {
+    const cached = readCache(path);
+    if (cached.found) return cached.body;
+  }
+
   const token = getAccessToken();
 
   const headers = Object.assign({}, options.headers || {});
@@ -262,6 +343,13 @@ async function apiFetch(path, options = {}) {
       (body && body.message) || defaultStatusMessage(response.status),
       response.status
     );
+  }
+
+  if (cacheable) {
+    writeCache(path, body);
+  } else if (method !== "GET") {
+    // Any write invalidates cached reads.
+    clearApiCache();
   }
 
   return body;
