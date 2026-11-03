@@ -11,7 +11,6 @@
 /* =========================================================
    ROOT
 ========================================================= */
-:root{
 .dashboard-page {
 
   --home-bg: #f6d9ff;
@@ -96,7 +95,6 @@
 
   margin: 0;
 
-}
 }
 
 /* =========================================================
@@ -3465,4 +3463,742 @@ body[data-premium-page="dashboard.html"] .container > .grid.grid-4 { grid-templa
 .semester-image img {
   object-fit: contain;
   object-position: center;
+}
+
+/* =========================================================
+   ABOUT PAGE — bespoke story, flow and team layout
+   Scoped to about.html only. No other page is affected.
+========================================================= */
+body[data-premium-page="about.html"] .about-wrap {
+  max-width: 1060px !important;
+  padding-bottom: 44px;
+}
+
+/* --- Intro --- */
+body[data-premium-page="about.html"] .about-intro { margin-bottom: 22px; }
+
+body[data-premium-page="about.html"] .about-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #6c55cf;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+body[data-premium-page="about.html"] .about-kicker > span {
+  width: 26px;
+  height: 2px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #7c5bf5, #5a7ff5);
+}
+
+body[data-premium-page="about.html"] .about-intro .page-title {
+  margin: 9px 0 0;
+  font-size: clamp(36px, 4.2vw, 54px);
+  line-height: .98;
+  letter-spacing: -2px;
+  font-weight: 900;
+}
+
+body[data-premium-page="about.html"] .about-intro .page-subtitle {
+  margin-top: 10px;
+  max-width: 680px;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* --- Stats strip --- */
+body[data-premium-page="about.html"] .about-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+body[data-premium-page="about.html"] .about-stat {
+  position: relative;
+  overflow: hidden;
+  padding: 19px 20px;
+  border: 1px solid rgba(255,255,255,.94);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255,255,255,.82), rgba(246,243,255,.56));
+  box-shadow: 0 18px 44px rgba(57,42,137,.09), inset 0 1px 0 rgba(255,255,255,.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+body[data-premium-page="about.html"] .about-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 58px rgba(57,42,137,.13), inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+body[data-premium-page="about.html"] .about-stat::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  right: -46px;
+  top: -56px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(126,96,244,.18), transparent 68%);
+  pointer-events: none;
+}
+
+body[data-premium-page="about.html"] .about-stat strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(120deg, #6f4be8, #587df0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body[data-premium-page="about.html"] .about-stat span {
+  display: block;
+  margin-top: 7px;
+  color: #7883ac;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
+
+/* --- Story card --- */
+body[data-premium-page="about.html"] .about-story {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  margin-top: 16px;
+  padding: 28px 30px;
+  border: 1px solid rgba(255,255,255,.95);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255,255,255,.84), rgba(247,244,255,.56));
+  box-shadow: 0 24px 60px rgba(57,42,137,.10), inset 0 1px 0 rgba(255,255,255,.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+body[data-premium-page="about.html"] .about-story-mark {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 25px;
+  background: linear-gradient(135deg, #8b6cff, #5b38df);
+  border: 1px solid rgba(255,255,255,.5);
+  box-shadow: 0 14px 32px rgba(92,61,204,.24), inset 0 1px 0 rgba(255,255,255,.32);
+}
+
+body[data-premium-page="about.html"] .about-story-copy .section-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  letter-spacing: -.6px;
+}
+
+body[data-premium-page="about.html"] .about-story-copy p {
+  margin: 0;
+  color: #626d99;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* --- Feature cards --- */
+body[data-premium-page="about.html"] .about-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+body[data-premium-page="about.html"] .about-feature {
+  position: relative;
+  overflow: hidden;
+  padding: 24px 22px 22px;
+  border: 1px solid rgba(255,255,255,.94);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255,255,255,.82), rgba(247,245,255,.54));
+  box-shadow: 0 20px 50px rgba(57,42,137,.09), inset 0 1px 0 rgba(255,255,255,.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease;
+}
+
+body[data-premium-page="about.html"] .about-feature::before {
+  content: attr(data-step);
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  color: rgba(104,71,238,.10);
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -2px;
+  pointer-events: none;
+}
+
+body[data-premium-page="about.html"] .about-feature::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 0;
+  width: 42px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, #7c5bf5, #5a7ff5);
+}
+
+body[data-premium-page="about.html"] .about-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 68px rgba(57,42,137,.14), inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+body[data-premium-page="about.html"] .about-feature h3 {
+  position: relative;
+  margin: 4px 0 7px;
+  color: #1d2560;
+  font-size: 18px;
+  letter-spacing: -.4px;
+}
+
+body[data-premium-page="about.html"] .about-feature p {
+  position: relative;
+  margin: 0;
+  color: #69749e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* --- Flow --- */
+body[data-premium-page="about.html"] .about-flow {
+  margin-top: 16px;
+  padding: 26px 30px 28px;
+  border: 1px solid rgba(255,255,255,.94);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(243,240,255,.5));
+  box-shadow: 0 22px 56px rgba(57,42,137,.09), inset 0 1px 0 rgba(255,255,255,.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+body[data-premium-page="about.html"] .about-flow-head .section-title {
+  margin: 7px 0 0;
+  font-size: 22px;
+  letter-spacing: -.6px;
+}
+
+body[data-premium-page="about.html"] .about-flow-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+body[data-premium-page="about.html"] .about-flow-steps::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 16px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(112,84,222,.22), rgba(112,84,222,.22), transparent);
+}
+
+body[data-premium-page="about.html"] .about-flow-step {
+  position: relative;
+  padding-top: 44px;
+}
+
+body[data-premium-page="about.html"] .about-flow-step b {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8b6cff, #5b38df);
+  border: 3px solid rgba(255,255,255,.85);
+  box-shadow: 0 8px 18px rgba(92,61,204,.22);
+}
+
+body[data-premium-page="about.html"] .about-flow-step h3 {
+  margin: 0 0 4px;
+  color: #202a64;
+  font-size: 14px;
+  letter-spacing: -.2px;
+}
+
+body[data-premium-page="about.html"] .about-flow-step p {
+  margin: 0;
+  max-width: 230px;
+  color: #7380a8;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* --- Developed By --- */
+body[data-premium-page="about.html"] .about-team {
+  position: relative;
+  overflow: hidden;
+  margin-top: 18px;
+  padding: 34px 30px 30px;
+  border: 1px solid rgba(255,255,255,.96);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(139,108,255,.20), transparent 46%),
+    radial-gradient(circle at 92% 100%, rgba(96,138,255,.17), transparent 48%),
+    linear-gradient(145deg, rgba(255,255,255,.90), rgba(243,240,255,.64));
+  box-shadow: 0 32px 82px rgba(57,42,137,.14), inset 0 1px 0 rgba(255,255,255,.95);
+  backdrop-filter: blur(22px) saturate(130%);
+  -webkit-backdrop-filter: blur(22px) saturate(130%);
+}
+
+body[data-premium-page="about.html"] .about-team::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -130px;
+  top: -150px;
+  border-radius: 50%;
+  border: 1px dashed rgba(112,84,222,.18);
+  pointer-events: none;
+}
+
+body[data-premium-page="about.html"] .about-team-head {
+  position: relative;
+  text-align: center;
+}
+
+body[data-premium-page="about.html"] .about-team-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(108,77,226,.14);
+  background: rgba(255,255,255,.6);
+  color: #6d55d2;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 24px rgba(72,53,155,.06);
+}
+
+body[data-premium-page="about.html"] .about-team-head h2 {
+  margin: 13px 0 0;
+  color: #171d49;
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1;
+  letter-spacing: -1.6px;
+  font-weight: 900;
+}
+
+body[data-premium-page="about.html"] .about-team-head p {
+  margin: 8px auto 0;
+  max-width: 430px;
+  color: #707ba5;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+body[data-premium-page="about.html"] .about-team-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 26px;
+}
+
+body[data-premium-page="about.html"] .about-member {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 10px 16px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.92);
+  border-radius: 19px;
+  background: rgba(255,255,255,.52);
+  box-shadow: 0 14px 34px rgba(57,42,137,.07), inset 0 1px 0 rgba(255,255,255,.9);
+  transition: transform .26s cubic-bezier(.2,.8,.2,1), box-shadow .26s ease, background .26s ease;
+}
+
+body[data-premium-page="about.html"] .about-member::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, #8b6cff, #5f7cf1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+body[data-premium-page="about.html"] .about-member:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 22px 48px rgba(57,42,137,.12), inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+body[data-premium-page="about.html"] .about-member:hover::before {
+  transform: scaleX(1);
+}
+
+body[data-premium-page="about.html"] .about-avatar {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 11px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .5px;
+  background: linear-gradient(135deg, #8b6cff, #5b38df);
+  border: 2px solid rgba(255,255,255,.8);
+  box-shadow: 0 12px 26px rgba(92,61,204,.24), inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+body[data-premium-page="about.html"] .about-member:nth-child(2) .about-avatar { background: linear-gradient(135deg, #7f8cf9, #4f5cdf); }
+body[data-premium-page="about.html"] .about-member:nth-child(3) .about-avatar { background: linear-gradient(135deg, #a179f6, #7141d9); }
+body[data-premium-page="about.html"] .about-member:nth-child(4) .about-avatar { background: linear-gradient(135deg, #6d9bf5, #4563d8); }
+body[data-premium-page="about.html"] .about-member:nth-child(5) .about-avatar { background: linear-gradient(135deg, #9a6ff0, #6741d2); }
+body[data-premium-page="about.html"] .about-member:nth-child(6) .about-avatar { background: linear-gradient(135deg, #7ab4f2, #4a75dc); }
+body[data-premium-page="about.html"] .about-member:nth-child(7) .about-avatar { background: linear-gradient(135deg, #8f7bf6, #5a4ad6); }
+body[data-premium-page="about.html"] .about-member:nth-child(8) .about-avatar { background: linear-gradient(135deg, #b07cf0, #6d45d8); }
+
+body[data-premium-page="about.html"] .about-member strong {
+  display: block;
+  color: #1f2a66;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .25px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  body[data-premium-page="about.html"] .about-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body[data-premium-page="about.html"] .about-flow-steps { grid-template-columns: 1fr; gap: 20px; }
+  body[data-premium-page="about.html"] .about-flow-steps::before { display: none; }
+  body[data-premium-page="about.html"] .about-flow-step p { max-width: none; }
+}
+
+@media (max-width: 680px) {
+  body[data-premium-page="about.html"] .about-stat-strip { grid-template-columns: 1fr; gap: 10px; }
+  body[data-premium-page="about.html"] .about-feature-grid { grid-template-columns: 1fr; }
+  body[data-premium-page="about.html"] .about-story { grid-template-columns: 1fr; padding: 24px 20px; gap: 14px; }
+  body[data-premium-page="about.html"] .about-story-mark { width: 52px; height: 52px; border-radius: 16px; font-size: 21px; }
+  body[data-premium-page="about.html"] .about-flow { padding: 22px 20px; }
+  body[data-premium-page="about.html"] .about-team { padding: 28px 18px 22px; border-radius: 24px; }
+  body[data-premium-page="about.html"] .about-team-grid { gap: 10px; }
+  body[data-premium-page="about.html"] .about-member { padding: 15px 8px 13px; }
+  body[data-premium-page="about.html"] .about-avatar { width: 46px; height: 46px; font-size: 13px; }
+  body[data-premium-page="about.html"] .about-member strong { font-size: 10px; }
+}
+
+/* =========================================================
+   HOME PAGE — typography refresh + mobile fixes
+   Scoped to the home dashboard so inner pages stay untouched.
+========================================================= */
+
+body.dashboard-page {
+  font-family: "Plus Jakarta Sans", "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body.dashboard-page .dashboard-brand,
+body.dashboard-page .welcome-copy h1,
+body.dashboard-page .section-heading h2,
+body.dashboard-page .semester-content h3,
+body.dashboard-page .resource-card strong {
+  font-family: "Sora", "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+/* Keep icon/symbol glyphs rendering exactly as before the font change */
+body.dashboard-page .brand-icon,
+body.dashboard-page .nav-icon,
+body.dashboard-page .welcome-badge > span:first-child,
+body.dashboard-page .float-orb,
+body.dashboard-page .hero-float-three > span,
+body.dashboard-page .section-icon,
+body.dashboard-page .continue-learning span,
+body.dashboard-page .semester-arrow,
+body.dashboard-page .resource-icon,
+body.dashboard-page .resource-arrow,
+body.dashboard-page .view-all,
+body.dashboard-page .mobile-menu {
+  font-family: "Inter", "Poppins", Arial, sans-serif;
+}
+
+/* Hero badge: proper pill instead of full-width block text */
+body.dashboard-page .welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  max-width: 100%;
+  color: #5b47b8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  line-height: 1.3;
+}
+
+body.dashboard-page .welcome-badge > span:first-child {
+  color: #7b57f0;
+  font-size: 11px;
+}
+
+/* Slightly unique accent word in the hero heading */
+body.dashboard-page .welcome-copy h1 .hero-accent {
+  background: linear-gradient(115deg, #6f45ec 8%, #4f7bf2 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fix the inverted heading sizes in the semester cards */
+body.dashboard-page .semester-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .35px;
+}
+
+body.dashboard-page .semester-content h3 {
+  font-size: 18px !important;
+  line-height: 1.28;
+  letter-spacing: -.35px;
+}
+
+body.dashboard-page .topic-tags span {
+  font-size: 10px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 680px) {
+  body.dashboard-page .dashboard-main {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  body.dashboard-page .dashboard-content {
+    padding-bottom: 34px;
+  }
+
+  body.dashboard-page .welcome-hero {
+    min-height: 0;
+    border-radius: 22px;
+  }
+
+  body.dashboard-page .welcome-copy {
+    width: 100%;
+    padding: 32px 21px 30px;
+  }
+
+  body.dashboard-page .welcome-copy h1 {
+    margin-top: 15px;
+    font-size: clamp(30px, 9vw, 40px);
+    line-height: 1.04;
+    letter-spacing: -1.4px;
+  }
+
+body.dashboard-page .welcome-copy p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Keep hero copy readable over the photo on phones */
+  body.dashboard-page .hero-overlay {
+    background:
+      linear-gradient(90deg,
+        rgba(249, 248, 255, .97) 0%,
+        rgba(249, 248, 255, .94) 40%,
+        rgba(249, 248, 255, .84) 68%,
+        rgba(249, 248, 255, .58) 88%,
+        rgba(249, 248, 255, .30) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, .10), rgba(72, 48, 165, .08));
+  }
+
+  body.dashboard-page .welcome-badge {
+    font-size: 8px;
+    letter-spacing: .85px;
+    padding: 6px 9px;
+  }
+
+  /* Floats overlapped the hero text on phones */
+  body.dashboard-page .hero-float {
+    display: none;
+  }
+
+  body.dashboard-page .continue-learning {
+    width: 100%;
+    min-height: 46px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  body.dashboard-page .hero-metrics {
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  body.dashboard-page .hero-metrics strong {
+    font-size: 18px;
+  }
+
+  body.dashboard-page .hero-metrics span {
+    font-size: 9px;
+  }
+
+  body.dashboard-page .semester-section,
+  body.dashboard-page .resources-section {
+    margin-top: 30px;
+  }
+
+  body.dashboard-page .section-heading {
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  body.dashboard-page .section-heading h2 {
+    font-size: 19px;
+    gap: 8px;
+  }
+
+  body.dashboard-page .section-heading p {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  body.dashboard-page .semester-grid,
+  body.dashboard-page .resource-grid {
+    gap: 13px;
+  }
+
+  body.dashboard-page .semester-card {
+    min-height: 0;
+    border-radius: 19px;
+  }
+
+  body.dashboard-page .semester-image {
+    height: auto;
+    aspect-ratio: 253 / 122;
+    margin: 6px 6px 0;
+    border-radius: 15px;
+  }
+
+  body.dashboard-page .semester-content {
+    padding: 12px 14px 20px;
+  }
+
+  body.dashboard-page .semester-content h3 {
+    font-size: 17px !important;
+  }
+
+  body.dashboard-page .semester-label {
+    font-size: 10px;
+  }
+
+  body.dashboard-page .topic-tags {
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  body.dashboard-page .topic-tags span {
+    font-size: 9.5px;
+    padding: 4px 7px;
+  }
+
+  body.dashboard-page .semester-arrow {
+    width: 33px !important;
+    height: 33px !important;
+    right: 13px;
+    bottom: 13px;
+  }
+
+  body.dashboard-page .resource-card {
+    min-height: 0;
+    padding: 14px 15px;
+    border-radius: 17px;
+  }
+
+  body.dashboard-page .resource-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+  }
+
+  body.dashboard-page .resource-card strong {
+    font-size: 13.5px;
+  }
+
+  body.dashboard-page .resource-card small {
+    font-size: 10.5px;
+  }
+}
+
+@media (max-width: 430px) {
+  body.dashboard-page .dashboard-main {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  body.dashboard-page .welcome-copy {
+    padding: 28px 16px 26px;
+  }
+
+  body.dashboard-page .welcome-copy h1 {
+    font-size: 29px;
+    letter-spacing: -1.1px;
+  }
+
+  body.dashboard-page .hero-metrics {
+    gap: 9px;
+  }
+
+  body.dashboard-page .hero-metrics strong {
+    font-size: 17px;
+  }
+
+  body.dashboard-page .section-heading h2 {
+    font-size: 18px;
+  }
+
+  body.dashboard-page .semester-image {
+    aspect-ratio: 253 / 130;
+  }
+
+  body.dashboard-page .resource-card {
+    padding: 13px 13px;
+  }
+
+  body.dashboard-page .resource-icon {
+    width: 41px;
+    height: 41px;
+  }
 }
